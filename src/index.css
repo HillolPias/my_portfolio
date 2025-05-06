@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme */
+  --color-light: #f8fafc;
+  --color-light-accent: #f1f5f9;
+  --color-dark: #1e293b;
+  --color-primary: #1D3557;
+  --color-primary-rgb: 29, 53, 87;
+  --color-primary-dark: #142536;
+  --color-primary-light: #3d7ea6;
+  --color-primary-light-rgb: 61, 126, 166;
+  --color-secondary: #06D6A0;
+  --color-secondary-dark: #05b084;
+  --color-secondary-light: #4adfbb;
+  --color-accent: #FF9F1C;
+}
+
+.dark {
+  /* Dark theme */
+  --color-light: #f8fafc;
+  --color-dark: #0f172a;
+  --color-dark-accent: #1e293b;
+  --color-primary: #3d7ea6;
+  --color-primary-rgb: 61, 126, 166;
+  --color-primary-dark: #142536;
+  --color-primary-light: #60a5d4;
+  --color-primary-light-rgb: 96, 165, 212;
+  --color-secondary: #06D6A0;
+  --color-secondary-dark: #05b084;
+  --color-secondary-light: #4adfbb;
+  --color-accent: #FF9F1C;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-light dark:bg-dark text-dark dark:text-light;
+}
+
+@layer utilities {
+  .bg-light {
+    background-color: var(--color-light);
+  }
+  
+  .bg-light-accent {
+    background-color: var(--color-light-accent);
+  }
+  
+  .bg-dark {
+    background-color: var(--color-dark);
+  }
+  
+  .bg-dark-accent {
+    background-color: var(--color-dark-accent);
+  }
+  
+  .text-light {
+    color: var(--color-light);
+  }
+  
+  .text-dark {
+    color: var(--color-dark);
+  }
+  
+  .text-primary {
+    color: var(--color-primary);
+  }
+  
+  .text-primary-light {
+    color: var(--color-primary-light);
+  }
+  
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
+  }
+  
+  .bg-primary-light {
+    background-color: var(--color-primary-light);
+  }
+  
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(var(--color-primary-rgb), 0.2);
+}
+
+.dark ::selection {
+  background-color: rgba(var(--color-primary-light-rgb), 0.2);
+}
