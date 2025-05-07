@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
                 Get in Touch
               </motion.a>
               <motion.a
-                href="/resume.pdf"
+                href="/Resume Hillol Das Pias Web-Dev.pdf"
                 download
                 className="px-8 py-3 bg-secondary text-white rounded-lg shadow-md hover:bg-secondary-dark transition-colors duration-300 text-lg font-medium flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
