@@ -36,7 +36,11 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  @apply bg-light dark:bg-dark text-dark dark:text-light;
+  @apply bg-light dark:bg-dark text-dark dark:text-light overflow-x-hidden;
+}
+
+#root {
+  @apply overflow-x-hidden;
 }
 
 @layer utilities {
@@ -95,6 +99,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  @apply overflow-x-hidden;
 }
 
 ::selection {

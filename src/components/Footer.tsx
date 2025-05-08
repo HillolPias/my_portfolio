@@ -1,28 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const socialLinks = [
-    { icon: <Github size={18} />, url: "https://github.com" },
-    { icon: <Linkedin size={18} />, url: "https://linkedin.com" },
-    { icon: <Twitter size={18} />, url: "https://twitter.com" }
+    { icon: <Github size={18} />, url: "https://github.com/HillolPias" },
+    {
+      icon: <Linkedin size={18} />,
+      url: "https://www.linkedin.com/in/hillol-das-pias-56454bb1/",
+    },
+    { icon: <Twitter size={18} />, url: "https://x.com/HD_Pias" },
   ];
-  
+
   const footerLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
-  
+
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -31,16 +35,20 @@ const Footer: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute -inset-1/2 bottom-0 right-0 bg-gradient-to-tl from-primary/5 to-transparent rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="md:col-span-1">
-              <a href="#home" className="text-2xl font-bold text-primary dark:text-primary-light mb-4 inline-block">
+              <a
+                href="#home"
+                className="text-2xl font-bold text-primary dark:text-primary-light mb-4 inline-block"
+              >
                 Hillol Das Pias
               </a>
               <p className="text-dark/70 dark:text-light/70 mb-6">
-                Creating elegant solutions to complex problems through clean, maintainable code and intuitive user interfaces.
+                Creating elegant solutions to complex problems through clean,
+                maintainable code and intuitive user interfaces.
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -58,7 +66,7 @@ const Footer: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="md:col-span-1">
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
@@ -78,7 +86,7 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
             </div>
-            
+
             <div className="md:col-span-1">
               <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
               <p className="text-dark/70 dark:text-light/70 mb-4">
@@ -101,10 +109,11 @@ const Footer: React.FC = () => {
               </form>
             </div>
           </div>
-          
+
           <div className="border-t border-dark/10 dark:border-light/10 pt-6 text-center text-dark/70 dark:text-light/70">
             <p className="flex items-center justify-center gap-1">
-              © {currentYear} Hillol Das Pias. Made with <Heart size={16} className="text-red-500" /> using React & Framer Motion
+              © {currentYear} Hillol Das Pias. Made with{" "}
+              <Heart size={16} className="text-red-500" />
             </p>
           </div>
         </div>

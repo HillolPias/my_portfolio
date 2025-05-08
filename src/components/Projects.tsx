@@ -221,7 +221,7 @@ const Projects: React.FC = () => {
           
           <motion.div variants={itemVariants} className="text-center mt-12">
             <motion.a
-              href="https://github.com"
+              href="https://github.com/HillolPias"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border border-dark/20 dark:border-light/20 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors duration-300 inline-block"

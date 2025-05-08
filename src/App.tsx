@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -30,7 +31,7 @@ function App() {
             key="loader"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="h-screen w-full flex items-center justify-center"
+            className="h-screen w-full flex items-center justify-center overflow-x-hidden"
           >
             <Loader />
           </motion.div>
@@ -40,12 +41,13 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="min-h-screen bg-light dark:bg-dark text-dark dark:text-light transition-colors duration-300"
+            className="min-h-screen bg-light dark:bg-dark text-dark dark:text-light transition-colors duration-300 overflow-x-hidden"
           >
             <Navbar />
-            <main>
+            <main className="overflow-x-hidden">
               <Hero />
               <About />
+              <Experience />
               <Projects />
               <Skills />
               <Contact />

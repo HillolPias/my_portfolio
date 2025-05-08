@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, FileDown, Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Twitter, FileDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const containerVariants = {
@@ -91,6 +91,9 @@ const Hero: React.FC = () => {
                 <FileDown size={20} />
                 Download Resume
               </motion.a>
+            </div>
+            
+            <div className="flex justify-center md:justify-start items-center gap-4 mb-12">
               <motion.a
                 href="#projects"
                 onClick={(e) => {

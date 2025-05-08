@@ -46,7 +46,6 @@ const Contact: React.FC = () => {
       [name]: value
     }));
     
-    // Clear error when field is modified
     if (errors[name]) {
       setErrors(prevErrors => ({
         ...prevErrors,
@@ -88,12 +87,10 @@ const Contact: React.FC = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Simulate API call
       setTimeout(() => {
         setIsSubmitting(false);
         setSubmitStatus('success');
         
-        // Reset form after successful submission
         setFormData({
           name: '',
           email: '',
@@ -101,7 +98,6 @@ const Contact: React.FC = () => {
           message: ''
         });
         
-        // Reset status after 3 seconds
         setTimeout(() => {
           setSubmitStatus('idle');
         }, 3000);
@@ -120,21 +116,21 @@ const Contact: React.FC = () => {
       icon: <Phone className="w-5 h-5 text-primary dark:text-primary-light" />,
       title: "Phone",
       value: "+8801738206419",
-      link: "tel:+11234567890"
+      link: "tel:+8801738206419"
     },
     {
       icon: <MapPin className="w-5 h-5 text-primary dark:text-primary-light" />,
       title: "Location",
       value: "Rajshahi, Bangladesh",
-      link: "https://maps.app.goo.gl/W3nFhYbxycyuG1su6"
+      link: "https://maps.app.goo.gl/Ltgtxy6dkgaeLhF38"
     }
   ];
 
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-16 relative">
       <div className="absolute inset-0 z-0">
-        <div className="absolute -inset-1/2 top-0 left-0 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl" />
-        <div className="absolute -inset-1/2 bottom-0 right-0 bg-gradient-to-tl from-secondary/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-secondary/5 to-transparent rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -145,15 +141,15 @@ const Contact: React.FC = () => {
           animate={inView ? "visible" : "hidden"}
           className="max-w-6xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-            <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-6"></div>
             <p className="text-lg text-dark/70 dark:text-light/70 max-w-3xl mx-auto">
               Have a project in mind or want to collaborate? Feel free to reach out to me. I'd love to hear from you!
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <motion.div variants={itemVariants} className="lg:col-span-1">
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
               

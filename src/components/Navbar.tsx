@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
@@ -34,7 +35,7 @@ const Navbar: React.FC = () => {
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      const offset = 80; // Adjust this value according to your navbar height
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
       
@@ -51,91 +52,54 @@ const Navbar: React.FC = () => {
 
   const navVariants = {
     open: {
-      opacity: 1,
       x: 0,
-      transition: { duration: 0.3, staggerChildren: 0.1, delayChildren: 0.2 }
+      opacity: 1,
+      transition: { 
+        type: "spring",
+        stiffness: 300,
+        damping: 30
+      }
     },
     closed: {
+      x: "100%",
       opacity: 0,
-      x: '100%',
-      transition: { duration: 0.3 }
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30
+      }
     }
   };
 
   const itemVariants = {
-    open: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-    closed: { opacity: 0, x: 50, transition: { duration: 0.3 } }
+    open: { 
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.3 }
+    },
+    closed: { 
+      opacity: 0,
+      x: 50,
+      transition: { duration: 0.3 }
+    }
   };
 
   return (
     <nav className={navbarClasses}>
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-xl font-bold"
-        >
-          <a href="#home" className="text-primary dark:text-primary-light">
-            Hillol.
-          </a>
-        </motion.div>
-        
-        <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <motion.a
-              key={item.name}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(item.href);
-              }}
-              className="text-dark/80 dark:text-light/80 hover:text-primary dark:hover:text-primary-light transition-colors"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
-            >
-              {item.name}
-            </motion.a>
-          ))}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="flex justify-between items-center">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="text-xl font-bold"
+          >
+            <a href="#home" className="text-primary dark:text-primary-light">
+              Hillol.
+            </a>
+          </motion.div>
           
-          <motion.button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </motion.button>
-        </div>
-        
-        <div className="flex items-center space-x-4 md:hidden">
-          <motion.button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </motion.button>
-          
-          <motion.button
-            onClick={toggleMenu}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="p-2"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
-        </div>
-
-        {/* Mobile menu */}
-        <motion.div
-          variants={navVariants}
-          initial="closed"
-          animate={isOpen ? 'open' : 'closed'}
-          className={`fixed inset-y-0 right-0 w-64 bg-light dark:bg-dark shadow-2xl p-8 flex flex-col justify-center z-50 md:hidden`}
-        >
-          <div className="space-y-6">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
@@ -144,15 +108,98 @@ const Navbar: React.FC = () => {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className="block text-lg font-medium hover:text-primary dark:hover:text-primary-light transition-colors"
+                className="text-dark/80 dark:text-light/80 hover:text-primary dark:hover:text-primary-light transition-colors"
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 0 }}
+              >
+                {item.name}
+              </motion.a>
+            ))}
+            
+            <motion.button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </motion.button>
+          </div>
+          
+          <div className="flex items-center space-x-4 lg:hidden">
+            <motion.button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </motion.button>
+            
+            <motion.button
+              onClick={toggleMenu}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <motion.div
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
+        variants={navVariants}
+        className="fixed inset-y-0 right-0 w-full sm:w-80 bg-light dark:bg-dark shadow-2xl lg:hidden"
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex justify-end p-4">
+            <motion.button
+              onClick={toggleMenu}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            >
+              <X size={24} />
+            </motion.button>
+          </div>
+          
+          <div className="flex flex-col space-y-4 p-6">
+            {navItems.map((item) => (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(item.href);
+                }}
+                className="text-lg font-medium py-2 px-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
                 variants={itemVariants}
+                whileHover={{ x: 10 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {item.name}
               </motion.a>
             ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
+
+      {/* Overlay */}
+      {/* {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="fixed inset-0 bg-black/50 lg:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )} */}
     </nav>
   );
 };
