@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Twitter, FileDown } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Twitter, FileDown } from "lucide-react";
 
 const Hero: React.FC = () => {
   const containerVariants = {
@@ -9,9 +9,9 @@ const Hero: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -21,28 +21,28 @@ const Hero: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const handleScrollToAbout = () => {
-    const aboutSection = document.querySelector('#about');
+    const aboutSection = document.querySelector("#about");
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="min-h-screen flex items-center relative overflow-hidden pt-20"
     >
       <div className="absolute inset-0 z-0">
         <div className="absolute -inset-1/2 top-0 right-0 bg-gradient-to-tl from-primary/10 to-transparent rounded-full blur-3xl" />
         <div className="absolute -inset-1/2 bottom-0 left-0 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           variants={containerVariants}
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
           animate="visible"
           className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12"
         >
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="md:w-1/2 text-center md:text-left"
           >
@@ -59,21 +59,24 @@ const Hero: React.FC = () => {
                 Full Stack Developer
               </span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Creating Beautiful Digital Experiences
+               Creating Beautiful Digital <span className="dark:text-purple-200/90 text-violet-900/50">Experiences</span>
             </h1>
-            
+
             <p className="text-xl text-dark/70 dark:text-light/70 mb-8">
-              I design and build exceptional digital experiences that are fast, accessible, and visually appealing.
+              I design and build exceptional digital experiences that are fast,
+              accessible, and visually appealing.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mb-8">
               <motion.a
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .querySelector("#contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="px-8 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-primary-dark transition-colors duration-300 text-lg font-medium"
                 whileHover={{ scale: 1.05 }}
@@ -92,13 +95,15 @@ const Hero: React.FC = () => {
                 Download Resume
               </motion.a>
             </div>
-            
+
             <div className="flex justify-center md:justify-start items-center gap-4 mb-12">
               <motion.a
                 href="#projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .querySelector("#projects")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="px-8 py-3 border border-dark/20 dark:border-light/20 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors duration-300 text-lg font-medium"
                 whileHover={{ scale: 1.05 }}
@@ -107,12 +112,18 @@ const Hero: React.FC = () => {
                 View Projects
               </motion.a>
             </div>
-            
+
             <div className="flex justify-center md:justify-start items-center gap-4">
               {[
-                { icon: <Github size={20} />, url: "https://github.com/HillolPias" },
-                { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/hillol-das-pias-56454bb1/" },
-                { icon: <Twitter size={20} />, url: "https://x.com/HD_Pias" }
+                {
+                  icon: <Github size={20} />,
+                  url: "https://github.com/HillolPias",
+                },
+                {
+                  icon: <Linkedin size={20} />,
+                  url: "https://www.linkedin.com/in/hillol-das-pias-56454bb1/",
+                },
+                { icon: <Twitter size={20} />, url: "https://x.com/HD_Pias" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -128,8 +139,8 @@ const Hero: React.FC = () => {
               ))}
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             variants={itemVariants}
             className="md:w-1/2 flex justify-center"
           >
@@ -138,12 +149,12 @@ const Hero: React.FC = () => {
                 className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-2xl"
                 animate={{
                   scale: [1, 1.1, 1],
-                  rotate: [0, 5, 0]
+                  rotate: [0, 5, 0],
                 }}
                 transition={{
                   duration: 5,
                   repeat: Infinity,
-                  repeatType: "reverse"
+                  repeatType: "reverse",
                 }}
               />
               <motion.img
@@ -158,8 +169,8 @@ const Hero: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
         initial={{ y: 0 }}
         animate={{ y: [0, 10, 0] }}

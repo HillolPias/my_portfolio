@@ -30,36 +30,37 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovators Inc.",
-      location: "San Francisco, CA",
-      period: "2021 - Present",
-      description: [
-        "Led a team of 5 developers in building a cloud-based SaaS platform",
-        "Improved application performance by 40% through optimization",
-        "Implemented CI/CD pipeline reducing deployment time by 60%"
-      ]
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      location: "New York, NY",
-      period: "2019 - 2021",
-      description: [
-        "Developed and maintained multiple client-facing web applications",
-        "Integrated third-party APIs and payment gateways",
-        "Mentored junior developers and conducted code reviews"
-      ]
-    },
-    {
       title: "Frontend Developer",
-      company: "Creative Web Agency",
-      location: "Boston, MA",
-      period: "2017 - 2019",
+      company: "Gooseberry Innovations",
+      location: "Chattogram, Bangladesh",
+      period: "2024-Jan, 2025",
       description: [
-        "Built responsive websites using React and Next.js",
-        "Collaborated with designers to implement pixel-perfect UIs",
-        "Reduced page load times by 50% through optimization"
+        "Led a team of 3 developers in building a cloud-based SaaS platform",
+        "Improved application performance by 40% through optimization",
+        "Reduced deployment time by 60%"
+      ]
+    },
+    {
+      title: "Chief Executive Officer (CEO)",
+      company: "LearnOn - Online Education Platform",
+      location: "Rajshahi, Bangladesh",
+      period: "December 2020-December 2023",
+      description: [
+        "Video Editing and Animation (Adobe Premier Pro, After Effects etc.)",
+        "Content Creation, Script Writing & Monitoring Team Activities",
+        "Graphic Design (Adobe Illustrator, InDesign, Photoshop, Canva etc",
+        "Sound Designing (Adobe Audition etc.)",
+        "Human Resource Management, Planning & Budgeting",
+        "Managing Social Media and SEO"
+      ]
+    },
+    {
+      title: "Graphic Designer",
+      company: "Cloudville (Social Managing Company)",
+      location: "Boston, MA",
+      period: "July 2020-January 2021",
+      description: [
+        "Graphic Design and Animation"
       ]
     }
   ];

@@ -7,21 +7,21 @@ import { ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Dashboard",
-    description: "A comprehensive dashboard for e-commerce businesses with analytics, inventory management, and order processing.",
-    image: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
+    title: "NextLevel Food",
+    description: "A fullstack community-driven web application for food sharing, built with Next.js and Supabase. Features include user authentication, image uploads, and dynamic content management.",
+    image: "/NextLevel-Food-App.png",
+    tags: ["Next.js", "Supabase"],
     category: "web",
-    github: "https://github.com",
-    demo: "https://demo.com"
+    github: "https://github.com/HillolPias/NextLevel-Food-Foodies-App-",
+    demo: "https://next-level-food-blond.vercel.app/"
   },
   {
     id: 2,
     title: "Health & Fitness App",
-    description: "A mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.",
+    description: "A fullstack community-driven web application for food sharing, built with Next.js and Supabase. Features include user authentication, image uploads, and dynamic content management.",
     image: "https://images.pexels.com/photos/3912368/pexels-photo-3912368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["React Native", "Firebase", "Redux"],
-    category: "mobile",
+    tags: ["Next.js", "Supabase"],
+    category: "web",
     github: "https://github.com",
     demo: "https://demo.com"
   },
@@ -37,26 +37,6 @@ const projects = [
   },
   {
     id: 4,
-    title: "Travel Blog",
-    description: "A travel blog with interactive maps, photo galleries, and travel guides for various destinations.",
-    image: "https://images.pexels.com/photos/1252500/pexels-photo-1252500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Gatsby", "GraphQL", "Styled Components"],
-    category: "web",
-    github: "https://github.com",
-    demo: "https://demo.com"
-  },
-  {
-    id: 5,
-    title: "AI Chatbot Assistant",
-    description: "An AI-powered chatbot that provides customer support, answers questions, and helps with tasks.",
-    image: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Python", "NLP", "React"],
-    category: "ai",
-    github: "https://github.com",
-    demo: "https://demo.com"
-  },
-  {
-    id: 6,
     title: "Real Estate Marketplace",
     description: "A platform for buying, selling, and renting properties with virtual tours and neighborhood insights.",
     image: "https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
