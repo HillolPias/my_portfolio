@@ -57,7 +57,7 @@ const Experience: React.FC = () => {
     {
       title: "Graphic Designer",
       company: "Cloudville (Social Managing Company)",
-      location: "Boston, MA",
+      location: "Dhaka, Bangladesh",
       period: "July 2020-January 2021",
       description: [
         "Graphic Design and Animation"
@@ -94,10 +94,10 @@ const Experience: React.FC = () => {
                 variants={itemVariants}
                 className="relative pl-8 md:pl-0"
               >
-                <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+                <div className="flex flex-col md:items-start md:flex-row gap-4 md:gap-8">
                   <div className="md:w-1/3">
-                    <div className="flex items-center gap-2 text-primary dark:text-primary-light mb-2">
-                      <Briefcase size={18} />
+                    <div className="flex items-start gap-2 text-primary dark:text-primary-light mb-2">
+                      <Briefcase size={18} className='mt-1'/>
                       <h3 className="text-xl font-semibold">{experience.title}</h3>
                     </div>
                     <div className="flex items-center gap-2 text-dark/70 dark:text-light/70 mb-2">
@@ -135,4 +135,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;
+export default Experience;   
