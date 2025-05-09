@@ -20,6 +20,7 @@ export default {
           light: 'var(--color-secondary-light)',
         },
         accent: 'var(--color-accent)',
+        'custom-dark-bg': '#0F172A'
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

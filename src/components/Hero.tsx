@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Twitter, FileDown } from "lucide-react";
+import { cn } from "../lib/utils";
 
 const Hero: React.FC = () => {
   const containerVariants = {
@@ -43,6 +44,17 @@ const Hero: React.FC = () => {
         <div className="absolute -inset-1/2 bottom-0 left-0 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl" />
       </div>
 
+      <div
+        className={cn(
+          "absolute inset-0",
+          "[background-size:40px_40px]",
+          "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+          "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+        )}
+      />
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-dark"></div>
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           variants={containerVariants}
@@ -61,7 +73,10 @@ const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-               Creating Beautiful Digital <span className="dark:text-purple-200/90 text-violet-900/50">Experiences</span>
+              Creating Beautiful Digital{" "}
+              <span className="dark:text-purple-200/90 text-violet-900/50">
+                Experiences
+              </span>
             </h1>
 
             <p className="text-xl text-dark/70 dark:text-light/70 mb-8">
