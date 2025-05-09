@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,16 +11,17 @@ import Loader from './components/Loader';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const loading = false;
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  // useEffect(() => {
+  //   // Simulate loading time
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
     
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <ThemeProvider>
