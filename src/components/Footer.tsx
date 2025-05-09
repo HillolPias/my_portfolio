@@ -96,11 +96,11 @@ const Footer: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="px-4 py-2 rounded-l-lg md:rounded-t-lg md:rounded-b-none lg:rounded-l-lg lg:rounded-r-none flex-grow bg-light dark:bg-dark border border-dark/10 dark:border-light/10 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                  className="w-52 md:w-full lg:w-auto px-3 py-2 rounded-l-lg md:rounded-t-lg md:rounded-b-none lg:rounded-l-lg lg:rounded-r-none flex-grow bg-light dark:bg-dark border border-dark/10 dark:border-light/10 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
                 />
                 <motion.button
                   type="submit"
-                  className="px-4 py-2 bg-primary text-white rounded-r-lg md:rounded-b-lg md:rounded-t-none lg:rounded-r-lg lg:rounded-l-none"
+                  className="md:w-full px-3 py-2 bg-primary text-white rounded-r-lg md:rounded-b-lg md:rounded-t-none lg:rounded-r-lg lg:rounded-l-none"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
