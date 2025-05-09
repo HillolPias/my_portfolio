@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
                     .querySelector("#projects")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="px-8 py-3 border border-dark/20 dark:border-light/20 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors duration-300 text-lg font-medium"
+                className="px-8 py-3 bg-white dark:bg-dark border border-dark/20 dark:border-light/20 rounded-lg hover:bg-dark/5 dark:hover:bg-light/5 transition-colors duration-300 text-lg font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
               </motion.a>
             </div>
 
-            <div className="flex justify-center md:justify-start items-center gap-4">
+            <div className="flex justify-center md:justify-start items-center gap-4  bg-white dark:bg-dark">
               {[
                 {
                   icon: <Github size={20} />,
