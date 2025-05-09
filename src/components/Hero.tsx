@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
               </motion.a>
             </div>
 
-            <div className="flex justify-center md:justify-start items-center gap-4  bg-white dark:bg-dark">
+            <div className="flex justify-center md:justify-start items-center gap-4 ">
               {[
                 {
                   icon: <Github size={20} />,
@@ -145,7 +145,7 @@ const Hero: React.FC = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full border border-dark/20 dark:border-light/20 hover:bg-dark/5 dark:hover:bg-light/5 transition-colors"
+                  className="p-3 rounded-full border border-dark/20 dark:border-light/20 hover:bg-dark/5 dark:hover:bg-light/5 transition-colors  bg-white dark:bg-dark"
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
                 >
