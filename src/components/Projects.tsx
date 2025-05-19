@@ -18,22 +18,22 @@ const projects = [
   {
     id: 2,
     title: "Health & Fitness App",
-    description: "A fullstack community-driven web application for food sharing, built with Next.js and Supabase. Features include user authentication, image uploads, and dynamic content management.",
+    description: "A web application for tracking workouts, nutrition, and health metrics with personalized recommendations.",
     image: "https://images.pexels.com/photos/3912368/pexels-photo-3912368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Next.js", "Supabase"],
+    tags: ["Next.js", "PostgreSQL", "Tailwind CSS"],
     category: "web",
     github: "https://github.com",
     demo: "https://demo.com"
   },
   {
     id: 3,
-    title: "Financial Planning Platform",
-    description: "A web platform for financial planning, budgeting, and investment tracking with interactive visualizations.",
-    image: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Next.js", "MongoDB", "Tailwind CSS"],
+    title: "Portfolio Landing Page",
+    description: "A sleek and responsive portfolio built with Next.js, styled using Tailwind CSS, and enhanced with smooth animations via Framer Motion.",
+    image: "/portfolio-app-screenshot.png",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
     category: "web",
-    github: "https://github.com",
-    demo: "https://demo.com"
+    github: "https://github.com/HillolPias/my_portfolio",
+    demo: "https://my-portfolio-five-theta-17.vercel.app/"
   },
   {
     id: 4,
