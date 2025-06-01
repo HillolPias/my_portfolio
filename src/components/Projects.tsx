@@ -55,10 +55,10 @@ const projects = [
     description:
       "A web application for tracking workouts, nutrition, and health metrics with personalized recommendations.",
     image:
-      "https://images.pexels.com/photos/3912368/pexels-photo-3912368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "/FitTrack-app.png",
     tags: ["Next.js", "PostgreSQL", "Tailwind CSS"],
     category: "web",
-    github: "https://github.com",
+    github: "https://github.com/HillolPias/Fitness-Tracking-App",
     demo: "https://demo.com",
   },
   

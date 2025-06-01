@@ -30,12 +30,15 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
-      title: "Frontend Developer",
-      company: "Gooseberry Innovations",
-      location: "Chattogram, Bangladesh",
-      period: "2024-Jan, 2025",
+      title: "Full-Stack Development Specialist",
+      company: "SwaPE IT Solutions",
+      location: "Remote",
+      period: "May 2023-Present",
       description: [
-        "Led a team of 3 developers in building a cloud-based SaaS platform",
+        "Built and maintaining a beautiful, modern, sleek, and scalable full-stack website for this company",
+        "Designed efficient, modular systems with a focus on performance, scalability, and maintainability.",
+        "Integrated third-party APIs and optimized development workflows with modern tools and automation.",
+        "Ensured high code quality through best practices, performance tuning, and consistent code reviews.",
         "Improved application performance by 40% through optimization",
         "Reduced deployment time by 60%"
       ]
