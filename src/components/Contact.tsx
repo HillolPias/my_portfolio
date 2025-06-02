@@ -1,33 +1,36 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
-  
+
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -35,74 +38,115 @@ const Contact: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5 }
-    }
+      transition: { duration: 0.5 },
+    },
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
-    
+
     if (errors[name]) {
-      setErrors(prevErrors => ({
+      setErrors((prevErrors) => ({
         ...prevErrors,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
-    
+
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
     }
-    
+
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = "Please enter a valid email address";
     }
-    
+
     if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
+      newErrors.subject = "Subject is required";
     }
-    
+
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = "Message is required";
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters';
+      newErrors.message = "Message must be at least 10 characters";
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   if (validateForm()) {
+  //     setIsSubmitting(true);
+
+  //     setTimeout(() => {
+  //       setIsSubmitting(false);
+  //       setSubmitStatus('success');
+
+  //       setFormData({
+  //         name: '',
+  //         email: '',
+  //         subject: '',
+  //         message: ''
+  //       });
+
+  //       setTimeout(() => {
+  //         setSubmitStatus('idle');
+  //       }, 3000);
+  //     }, 1500);
+  //   }
+  // };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (validateForm()) {
-      setIsSubmitting(true);
-      
-      setTimeout(() => {
+
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // <-- Replace with your EmailJS Service ID
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // <-- Replace with your EmailJS Public Key
+      )
+      .then(() => {
         setIsSubmitting(false);
-        setSubmitStatus('success');
-        
+        setSubmitStatus("success");
         setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
         });
-        
-        setTimeout(() => {
-          setSubmitStatus('idle');
-        }, 3000);
-      }, 1500);
-    }
+
+        setTimeout(() => setSubmitStatus("idle"), 3000);
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+        setSubmitStatus("error");
+      });
   };
 
   const contactInfo = [
@@ -110,20 +154,20 @@ const Contact: React.FC = () => {
       icon: <Mail className="w-5 h-5 text-primary dark:text-primary-light" />,
       title: "Email",
       value: "hillol4958@gmail.com",
-      link: "mailto:hillol4958@gmail.com"
+      link: "mailto:hillol4958@gmail.com",
     },
     {
       icon: <Phone className="w-5 h-5 text-primary dark:text-primary-light" />,
       title: "Phone",
       value: "+8801738206419",
-      link: "tel:+8801738206419"
+      link: "tel:+8801738206419",
     },
     {
       icon: <MapPin className="w-5 h-5 text-primary dark:text-primary-light" />,
       title: "Location",
       value: "Rajshahi, Bangladesh",
-      link: "https://maps.app.goo.gl/Ltgtxy6dkgaeLhF38"
-    }
+      link: "https://maps.app.goo.gl/Ltgtxy6dkgaeLhF38",
+    },
   ];
 
   return (
@@ -132,7 +176,7 @@ const Contact: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl" />
         <div className="absolute inset-0 bg-gradient-to-tl from-secondary/5 to-transparent rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           ref={ref}
@@ -142,17 +186,22 @@ const Contact: React.FC = () => {
           className="max-w-6xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Get In Touch
+            </h2>
             <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-6"></div>
             <p className="text-lg text-dark/70 dark:text-light/70 max-w-3xl mx-auto">
-              Have a project in mind or want to collaborate? Feel free to reach out to me. I'd love to hear from you!
+              Have a project in mind or want to collaborate? Feel free to reach
+              out to me. I'd love to hear from you!
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <motion.div variants={itemVariants} className="lg:col-span-1">
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              
+              <h3 className="text-2xl font-semibold mb-6">
+                Contact Information
+              </h3>
+
               <div className="space-y-6 mb-8">
                 {contactInfo.map((item, index) => (
                   <a
@@ -167,18 +216,23 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <p className="font-medium">{item.title}</p>
-                      <p className="text-dark/70 dark:text-light/70">{item.value}</p>
+                      <p className="text-dark/70 dark:text-light/70">
+                        {item.value}
+                      </p>
                     </div>
                   </a>
                 ))}
               </div>
-              
+
               <h4 className="text-xl font-semibold mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {[
                   { name: "GitHub", url: "https://github.com/HillolPias" },
-                  { name: "LinkedIn", url: "https://www.linkedin.com/in/hillol-das-pias-56454bb1/" },
-                  { name: "Twitter", url: "https://x.com/HD_Pias" }
+                  {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/hillol-das-pias-56454bb1/",
+                  },
+                  { name: "Twitter", url: "https://x.com/HD_Pias" },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
@@ -194,11 +248,11 @@ const Contact: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
-              
-              {submitStatus === 'success' && (
+
+              {submitStatus === "success" && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -207,11 +261,14 @@ const Contact: React.FC = () => {
                   Thank you for your message! I'll get back to you soon.
                 </motion.div>
               )}
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block mb-2 text-sm font-medium">
+                    <label
+                      htmlFor="name"
+                      className="block mb-2 text-sm font-medium"
+                    >
                       Your Name
                     </label>
                     <input
@@ -221,7 +278,9 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg bg-light-accent dark:bg-dark-accent border ${
-                        errors.name ? 'border-red-500' : 'border-dark/10 dark:border-light/10'
+                        errors.name
+                          ? "border-red-500"
+                          : "border-dark/10 dark:border-light/10"
                       } focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light`}
                       placeholder="Hillol Das Pias"
                     />
@@ -229,9 +288,12 @@ const Contact: React.FC = () => {
                       <p className="mt-1 text-sm text-red-500">{errors.name}</p>
                     )}
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block mb-2 text-sm font-medium">
+                    <label
+                      htmlFor="email"
+                      className="block mb-2 text-sm font-medium"
+                    >
                       Your Email
                     </label>
                     <input
@@ -241,18 +303,25 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg bg-light-accent dark:bg-dark-accent border ${
-                        errors.email ? 'border-red-500' : 'border-dark/10 dark:border-light/10'
+                        errors.email
+                          ? "border-red-500"
+                          : "border-dark/10 dark:border-light/10"
                       } focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light`}
                       placeholder="example@email.com"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="subject" className="block mb-2 text-sm font-medium">
+                  <label
+                    htmlFor="subject"
+                    className="block mb-2 text-sm font-medium"
+                  >
                     Subject
                   </label>
                   <input
@@ -262,17 +331,24 @@ const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-lg bg-light-accent dark:bg-dark-accent border ${
-                      errors.subject ? 'border-red-500' : 'border-dark/10 dark:border-light/10'
+                      errors.subject
+                        ? "border-red-500"
+                        : "border-dark/10 dark:border-light/10"
                     } focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light`}
                     placeholder="Project inquiry"
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.subject}
+                    </p>
                   )}
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block mb-2 text-sm font-medium">
+                  <label
+                    htmlFor="message"
+                    className="block mb-2 text-sm font-medium"
+                  >
                     Message
                   </label>
                   <textarea
@@ -282,29 +358,49 @@ const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-lg bg-light-accent dark:bg-dark-accent border ${
-                      errors.message ? 'border-red-500' : 'border-dark/10 dark:border-light/10'
+                      errors.message
+                        ? "border-red-500"
+                        : "border-dark/10 dark:border-light/10"
                     } focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light`}
                     placeholder="Your message here..."
                   />
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
-                
+
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
                   className={`px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-primary-dark transition-colors duration-300 flex items-center justify-center space-x-2 ${
-                    isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+                    isSubmitting ? "opacity-75 cursor-not-allowed" : ""
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {isSubmitting ? (
                     <>
-                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      <svg
+                        className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
                       </svg>
                       <span>Sending...</span>
                     </>
