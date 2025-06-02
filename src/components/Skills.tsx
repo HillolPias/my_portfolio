@@ -39,25 +39,25 @@ const Skills: React.FC = () => {
     { name: "JavaScript", level: 85, color: "#F7DF1E" },
     { name: "TypeScript", level: 80, color: "#3178C6" },
     { name: "CSS/Tailwind", level: 85, color: "#1572B6" },
-    { name: "HTML", level: 90, color: "#E34F26" },
+    { name: "Framer Motion", level: 90, color: "#E34F26" },
   ];
 
   const backend: Skill[] = [
     { name: "Node.js", level: 80, color: "#339933" },
-    { name: "Express", level: 85, color: "#000000" },
+    { name: "Express", level: 85, color: "#373737" },
     { name: "MongoDB", level: 75, color: "#47A248" },
     { name: "PostgreSQL", level: 85, color: "#336791" },
-    { name: "GraphQL", level: 60, color: "#E10098" },
-    { name: "Firebase", level: 70, color: "#FFCA28" },
+    { name: "Supabase/Firebase", level: 85, color: "#44D093" },
+    { name: "NextAuth/Clerk", level: 75, color: "#BD30E5" },
   ];
 
   const other: Skill[] = [
-    { name: "Git", level: 85, color: "#F05032" },
-    { name: "Docker", level: 65, color: "#2496ED" },
-    { name: "CI/CD", level: 60, color: "#4285F4" },
+    { name: "Git/GitHub", level: 85, color: "#F05032" },
+    { name: "Stripe", level: 75, color: "#4285F4" },
+    { name: "Vercel", level: 90, color: "#000000" },
+    { name: "Zod", level: 80, color: "#3C9CD7" },
+    { name: "Shadcn UI", level: 85, color: "#000000" },
     { name: "Figma", level: 85, color: "#F24E1E" },
-    { name: "Agile/Scrum", level: 70, color: "#6DB33F" },
-    { name: "TDD", level: 65, color: "#3C9CD7" },
   ];
 
   const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
