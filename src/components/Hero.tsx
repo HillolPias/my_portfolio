@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
           >
             <div className="mb-4">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light text-sm font-medium inline-block">
-                Full Stack Developer
+                Full Stack Developer (Web & Mobile App)
               </span>
             </div>
 

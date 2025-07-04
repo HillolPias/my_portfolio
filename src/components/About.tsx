@@ -35,8 +35,8 @@ const About: React.FC = () => {
   const services = [
     {
       icon: <Code className="w-6 h-6 text-primary dark:text-primary-light" />,
-      title: "Web Development",
-      description: "Building responsive, accessible, and performant websites and web applications with modern technologies."
+      title: "Web & Mobile App Development",
+      description: "Building responsive, accessible, and performant websites and web/mobile applications with modern technologies."
     },
     {
       icon: <Palette className="w-6 h-6 text-primary dark:text-primary-light" />,
@@ -68,7 +68,7 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-8"></div>
             <p className="text-lg text-dark/70 dark:text-light/70 max-w-3xl mx-auto">
-              I'm a passionate developer with a strong focus on creating elegant solutions that solve real-world problems. With over 1.5 years of experience, I've worked on a wide range of projects across various industries.
+              I'm a passionate developer with a strong focus on creating elegant solutions that solve real-world problems. With over 2 years of experience, I've worked on a wide range of projects across various industries.
             </p>
           </motion.div>
           
