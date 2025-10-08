@@ -45,7 +45,10 @@ const Skills: React.FC = () => {
   const backend: Skill[] = [
     { name: "Node.js", level: 80, color: "#339933" },
     { name: "Express", level: 85, color: "#373737" },
-    { name: "MongoDB", level: 75, color: "#47A248" },
+    { name: "Java", level: 85, color: "#E34F26" },
+    { name: "Spring Boot", level: 90, color: "#6DB33F" },
+    { name: "PHP (Laravel)", level: 65, color: "#7B7FB5" },
+    { name: "MongoDB", level: 75, color: "#00694A" },
     { name: "PostgreSQL", level: 85, color: "#336791" },
     { name: "Supabase/Firebase", level: 85, color: "#44D093" },
     { name: "NextAuth/Clerk", level: 75, color: "#BD30E5" },
@@ -57,6 +60,7 @@ const Skills: React.FC = () => {
     { name: "Vercel", level: 90, color: "#000000" },
     { name: "Zod", level: 80, color: "#3C9CD7" },
     { name: "Shadcn UI", level: 85, color: "#000000" },
+    { name: "Docker & Containerization", level: 80, color: "#0886AB" },
     { name: "Figma", level: 85, color: "#F24E1E" },
   ];
 

@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
       title: "Full-Stack Development Specialist",
       company: "SwaPE IT Solutions",
       location: "Remote",
-      period: "May 2023-Present",
+      period: "December 2023-Present",
       description: [
         "Built and maintaining a beautiful, modern, sleek, and scalable full-stack website for this company",
         "Designed efficient, modular systems with a focus on performance, scalability, and maintainability.",
@@ -44,10 +44,22 @@ const Experience: React.FC = () => {
       ]
     },
     {
+      title: "Software Developer",
+      company: "Raj IT Solutions Ltd.",
+      location: "Remote/On-site",
+      period: "July 2022-December 2023",
+      description: [
+        "Developed and maintained microservices using Java (Spring Boot) ensuring scalability and high performance",
+        "Built and optimized backend systems in PHP (Laravel), improving API response times by 25%",
+        "Designed REST APIs and integrated with front-end tech(React.js) to deliver seamless user experiences",
+        "Implemented CI/CD pipelines and containerization with Docker, enhancing deployment efficiency",
+      ]
+    },
+    {
       title: "Chief Executive Officer (CEO)",
       company: "LearnOn - Online Education Platform",
       location: "Rajshahi, Bangladesh",
-      period: "December 2020-December 2023",
+      period: "December 2020-July 2022",
       description: [
         "Video Editing and Animation (Adobe Premier Pro, After Effects etc.)",
         "Content Creation, Script Writing & Monitoring Team Activities",
@@ -61,9 +73,9 @@ const Experience: React.FC = () => {
       title: "Graphic Designer",
       company: "Cloudville (Social Managing Company)",
       location: "Dhaka, Bangladesh",
-      period: "July 2020-January 2021",
+      period: "January 2020-January 2021",
       description: [
-        "Graphic Design and Animation"
+        "Graphic Design and Animation (Adobe Illustrator, InDesign, Photoshop, Canva, Premier Pro, After Effects etc.)"
       ]
     }
   ];
