@@ -77,6 +77,17 @@ const Experience: React.FC = () => {
       description: [
         "Graphic Design and Animation (Adobe Illustrator, InDesign, Photoshop, Canva, Premier Pro, After Effects etc.)"
       ]
+    },
+    {
+      title: "Freelance Full-Stack Developer",
+      company: "Independent (Self-Learning & Projects)",
+      location: "Dhaka, Bangladesh",
+      period: "October 2015-January 2020",
+      description: [
+        "Built multiple personal and academic-style projects, including e-commerce platforms, booking systems, and RESTful APIs, to strengthen backend development skills",
+        "Explored frontend development with JavaScript, React, and Next.js, creating responsive interfaces and integrating them with backend APIs",
+        "Designed and optimized databases (PostgreSQL, MongoDB, MySQL) for project use cases, enhancing understanding of relational and NoSQL systems",
+      ]
     }
   ];
 
