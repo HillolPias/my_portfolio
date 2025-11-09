@@ -49,8 +49,8 @@ const Experience: React.FC = () => {
       location: "Remote/On-site",
       period: "July 2022-December 2023",
       description: [
-        "Developed and maintained microservices using Java (Spring Boot) ensuring scalability and high performance",
-        "Built and optimized backend systems in PHP (Laravel), improving API response times by 25%",
+        "Developed and maintained services using Java(Spring Boot, Spring Security, Spring MVC etc.) ensuring scalability and high performance",
+        "Built and optimized backend systems in PHP(Laravel), improving API response times by 25%",
         "Designed REST APIs and integrated with front-end tech(React.js) to deliver seamless user experiences",
         "Implemented CI/CD pipelines and containerization with Docker, enhancing deployment efficiency",
       ]
@@ -61,21 +61,21 @@ const Experience: React.FC = () => {
       location: "Rajshahi, Bangladesh",
       period: "December 2020-July 2022",
       description: [
-        "Video Editing and Animation (Adobe Premier Pro, After Effects etc.)",
+        "Video Editing and Animation(Adobe Premier Pro, After Effects etc.)",
         "Content Creation, Script Writing & Monitoring Team Activities",
-        "Graphic Design (Adobe Illustrator, InDesign, Photoshop, Canva etc",
-        "Sound Designing (Adobe Audition etc.)",
+        "Graphic Design(Adobe Illustrator, InDesign, Photoshop, Canva etc.)",
+        "Sound Designing(Adobe Audition etc.)",
         "Human Resource Management, Planning & Budgeting",
         "Managing Social Media and SEO"
       ]
     },
     {
       title: "Graphic Designer",
-      company: "Cloudville (Social Managing Company)",
+      company: "Cloudville(Social Managing Company)",
       location: "Dhaka, Bangladesh",
       period: "January 2020-January 2021",
       description: [
-        "Graphic Design and Animation (Adobe Illustrator, InDesign, Photoshop, Canva, Premier Pro, After Effects etc.)"
+        "Graphic Design and Animation(Adobe Illustrator, InDesign, Photoshop, Canva, Premier Pro, After Effects etc.)"
       ]
     },
     {
@@ -86,7 +86,7 @@ const Experience: React.FC = () => {
       description: [
         "Built multiple personal and academic-style projects, including e-commerce platforms, booking systems, and RESTful APIs, to strengthen backend development skills",
         "Explored frontend development with JavaScript, React, and Next.js, creating responsive interfaces and integrating them with backend APIs",
-        "Designed and optimized databases (PostgreSQL, MongoDB, MySQL) for project use cases, enhancing understanding of relational and NoSQL systems",
+        "Designed and optimized databases(PostgreSQL, MongoDB, MySQL) for project use cases, enhancing understanding of relational and NoSQL systems",
       ]
     }
   ];
