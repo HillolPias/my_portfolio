@@ -7,6 +7,17 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "Product Store App",
+    description:
+      "A simple and modern full-stack product management application where users can add, view, update, and delete products. Built with Node.js, Express, MongoDB Atlas, and a React/Chakra UI frontend.",
+    image: "/Product-store-app.png",
+    tags: ["React.js", "Chakra UI", "Node.js", "Express.js", "MogoDB Atlas"],
+    category: "web",
+    github: "https://github.com/HillolPias/product-store-mern",
+    demo: "https://product-store-app-eight.vercel.app/",
+  },
+  {
+    id: 2,
     title: "SwaPE IT Solutions",
     description:
       "A modern, responsive business website built with Next.js and TypeScript, styled using Tailwind CSS and ShadCN, with smooth animations powered by Framer Motion.",
@@ -17,7 +28,7 @@ const projects = [
     demo: "https://www.swapeit.co.uk/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Portfolio Landing Page",
     description:
       "A sleek and responsive portfolio built with Next.js, styled using Tailwind CSS, and enhanced with smooth animations via Framer Motion.",
@@ -28,7 +39,7 @@ const projects = [
     demo: "https://my-portfolio-five-theta-17.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "NextLevel Food",
     description:
       "A fullstack community-driven web application for food sharing, built with Next.js and Supabase. Features include user authentication, image uploads, and dynamic content management.",
@@ -39,29 +50,36 @@ const projects = [
     demo: "https://next-level-food-blond.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "TechGear E-commerce App",
     description:
       "A sleek full-stack e-commerce platform built with Next.js, MongoDB, Stripe, and NextAuth, featuring modern UI with Tailwind CSS, ShadCN, Framer Motion, and form validation via Zod.",
     image: "/TechGear-app.png",
-    tags: ["Next.js", "MongoDB", "Tailwind CSS", "NextAuth", "Stripe", "Zod", "Shad CN", "Framer Motion"],
+    tags: [
+      "Next.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "NextAuth",
+      "Stripe",
+      "Zod",
+      "Shad CN",
+      "Framer Motion",
+    ],
     category: "web",
     github: "https://github.com/HillolPias/TechGear-App",
     demo: "https://tech-gear-app.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "FitTrack - Health & Fitness App",
     description:
       "A web application for tracking workouts, nutrition, and health metrics with personalized recommendations.",
-    image:
-      "/FitTrack-app.png",
+    image: "/FitTrack-app.png",
     tags: ["Next.js", "PostgreSQL", "Tailwind CSS"],
     category: "web",
     github: "https://github.com/HillolPias/Fitness-Tracking-App",
     demo: "https://demo.com",
   },
-  
 ];
 
 const Projects: React.FC = () => {
