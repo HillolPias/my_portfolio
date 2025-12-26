@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const Experience: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const containerVariants = {
@@ -14,9 +14,9 @@ const Experience: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -24,8 +24,8 @@ const Experience: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5 }
-    }
+      transition: { duration: 0.5 },
+    },
   };
 
   const experiences = [
@@ -40,43 +40,43 @@ const Experience: React.FC = () => {
         "Integrated third-party APIs and optimized development workflows with modern tools and automation.",
         "Ensured high code quality through best practices, performance tuning, and consistent code reviews.",
         "Improved application performance by 40% through optimization",
-        "Reduced deployment time by 60%"
-      ]
+        "Reduced deployment time by 60%",
+      ],
     },
     {
       title: "Software Developer",
       company: "Raj IT Solutions Ltd.",
       location: "Remote/On-site",
-      period: "July 2022-December 2023",
+      period: "November 2021-December 2023",
       description: [
         "Developed and maintained services using Java(Spring Boot, Spring Security, Spring MVC etc.) ensuring scalability and high performance",
         "Built and optimized backend systems in PHP(Laravel), improving API response times by 25%",
         "Designed REST APIs and integrated with front-end tech(React.js) to deliver seamless user experiences",
         "Implemented CI/CD pipelines and containerization with Docker, enhancing deployment efficiency",
-      ]
+      ],
     },
     {
       title: "Chief Executive Officer (CEO)",
       company: "LearnOn - Online Education Platform",
       location: "Rajshahi, Bangladesh",
-      period: "December 2020-July 2022",
+      period: "January 2021-July 2022",
       description: [
         "Video Editing and Animation(Adobe Premier Pro, After Effects etc.)",
         "Content Creation, Script Writing & Monitoring Team Activities",
         "Graphic Design(Adobe Illustrator, InDesign, Photoshop, Canva etc.)",
         "Sound Designing(Adobe Audition etc.)",
         "Human Resource Management, Planning & Budgeting",
-        "Managing Social Media and SEO"
-      ]
+        "Managing Social Media and SEO",
+      ],
     },
     {
       title: "Graphic Designer",
       company: "Cloudville(Social Managing Company)",
       location: "Dhaka, Bangladesh",
-      period: "January 2020-January 2021",
+      period: "January 2020-October 2021",
       description: [
-        "Graphic Design and Animation(Adobe Illustrator, InDesign, Photoshop, Canva, Premier Pro, After Effects etc.)"
-      ]
+        "Graphic Design and Animation(Adobe Illustrator, InDesign, Photoshop, Canva, Premier Pro, After Effects etc.)",
+      ],
     },
     {
       title: "Freelance Full-Stack Developer",
@@ -87,16 +87,19 @@ const Experience: React.FC = () => {
         "Built multiple personal and academic-style projects, including e-commerce platforms, booking systems, and RESTful APIs, to strengthen backend development skills",
         "Explored frontend development with JavaScript, React, and Next.js, creating responsive interfaces and integrating them with backend APIs",
         "Designed and optimized databases(PostgreSQL, MongoDB, MySQL) for project use cases, enhancing understanding of relational and NoSQL systems",
-      ]
-    }
+      ],
+    },
   ];
 
   return (
-    <section id="experience" className="py-24 bg-light-accent dark:bg-dark-accent relative">
+    <section
+      id="experience"
+      className="py-24 bg-light-accent dark:bg-dark-accent relative"
+    >
       <div className="absolute inset-0 z-0">
         <div className="absolute -inset-1/2 top-0 left-0 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           ref={ref}
@@ -106,13 +109,16 @@ const Experience: React.FC = () => {
           className="max-w-6xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Work Experience
+            </h2>
             <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-8"></div>
             <p className="text-lg text-dark/70 dark:text-light/70 max-w-3xl mx-auto">
-              My professional journey and the valuable experience I've gained along the way.
+              My professional journey and the valuable experience I've gained
+              along the way.
             </p>
           </motion.div>
-          
+
           <div className="space-y-8">
             {experiences.map((experience, index) => (
               <motion.div
@@ -123,8 +129,10 @@ const Experience: React.FC = () => {
                 <div className="flex flex-col md:items-start md:flex-row gap-4 md:gap-8">
                   <div className="md:w-1/3">
                     <div className="flex items-start gap-2 text-primary dark:text-primary-light mb-2">
-                      <Briefcase size={18} className='mt-1'/>
-                      <h3 className="text-xl font-semibold">{experience.title}</h3>
+                      <Briefcase size={18} className="mt-1" />
+                      <h3 className="text-xl font-semibold">
+                        {experience.title}
+                      </h3>
                     </div>
                     <div className="flex items-center gap-2 text-dark/70 dark:text-light/70 mb-2">
                       <Calendar size={16} />
@@ -135,12 +143,17 @@ const Experience: React.FC = () => {
                       <span>{experience.location}</span>
                     </div>
                   </div>
-                  
+
                   <div className="md:w-2/3">
-                    <h4 className="text-lg font-medium mb-3">{experience.company}</h4>
+                    <h4 className="text-lg font-medium mb-3">
+                      {experience.company}
+                    </h4>
                     <ul className="space-y-2">
                       {experience.description.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-dark/70 dark:text-light/70">
+                        <li
+                          key={idx}
+                          className="flex items-start gap-2 text-dark/70 dark:text-light/70"
+                        >
                           <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light flex-shrink-0" />
                           {item}
                         </li>
@@ -148,7 +161,7 @@ const Experience: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-                
+
                 {index !== experiences.length - 1 && (
                   <div className="absolute left-4 md:left-1/3 top-full w-px h-8 bg-primary/20 dark:bg-primary-light/20" />
                 )}
@@ -161,4 +174,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;   
+export default Experience;
