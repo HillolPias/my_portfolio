@@ -7,6 +7,25 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "Full-stack Chat App",
+    description:
+      "A real-time chat application with user authentication, real-time messaging, and image uploads. Built with Node.js, Express, MongoDB Atlas, Socket.io, and a React/Chakra UI frontend.",
+    image: "/Full-stack-Chat-App.png",
+    tags: [
+      "React.js",
+      "Chakra UI",
+      "Node.js",
+      "Express.js",
+      "MogoDB Atlas",
+      "Socket.io",
+    ],
+    category: "web",
+    github: "https://github.com/HillolPias/Chatty-App-fullstack-",
+    demo: "https://chatty-app-fullstack-iib8.onrender.com/",
+  },
+
+  {
+    id: 2,
     title: "Product Store App",
     description:
       "A simple and modern full-stack product management application where users can add, view, update, and delete products. Built with Node.js, Express, MongoDB Atlas, and a React/Chakra UI frontend.",
@@ -17,7 +36,7 @@ const projects = [
     demo: "https://product-store-app-eight.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "SwaPE IT Solutions",
     description:
       "A modern, responsive business website built with Next.js and TypeScript, styled using Tailwind CSS and ShadCN, with smooth animations powered by Framer Motion.",
@@ -28,7 +47,7 @@ const projects = [
     demo: "https://www.swapeit.co.uk/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Portfolio Landing Page",
     description:
       "A sleek and responsive portfolio built with Next.js, styled using Tailwind CSS, and enhanced with smooth animations via Framer Motion.",
@@ -39,7 +58,7 @@ const projects = [
     demo: "https://my-portfolio-five-theta-17.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "NextLevel Food",
     description:
       "A fullstack community-driven web application for food sharing, built with Next.js and Supabase. Features include user authentication, image uploads, and dynamic content management.",
@@ -50,7 +69,7 @@ const projects = [
     demo: "https://next-level-food-blond.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "TechGear E-commerce App",
     description:
       "A sleek full-stack e-commerce platform built with Next.js, MongoDB, Stripe, and NextAuth, featuring modern UI with Tailwind CSS, ShadCN, Framer Motion, and form validation via Zod.",
@@ -70,7 +89,7 @@ const projects = [
     demo: "https://tech-gear-app.vercel.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "FitTrack - Health & Fitness App",
     description:
       "A web application for tracking workouts, nutrition, and health metrics with personalized recommendations.",
