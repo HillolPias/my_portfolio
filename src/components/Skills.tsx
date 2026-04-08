@@ -38,30 +38,35 @@ const Skills: React.FC = () => {
     { name: "React", level: 90, color: "#61DAFB" },
     { name: "JavaScript", level: 85, color: "#F7DF1E" },
     { name: "TypeScript", level: 80, color: "#3178C6" },
-    { name: "CSS/Tailwind", level: 85, color: "#1572B6" },
+    { name: "Tailwind CSS", level: 85, color: "#1572B6" },
+    { name: "Zustand", level: 90, color: "#453F39" },
+    { name: "Shadcn UI", level: 85, color: "#000000" },
     { name: "Framer Motion", level: 90, color: "#E34F26" },
+    { name: "Figma/Illustrator", level: 85, color: "#F24E1E" },
   ];
 
   const backend: Skill[] = [
-    { name: "Node.js", level: 80, color: "#339933" },
-    { name: "Express", level: 85, color: "#373737" },
+    { name: "Node.js", level: 85, color: "#339933" },
+    { name: "Express", level: 90, color: "#373737" },
     { name: "Java", level: 85, color: "#E34F26" },
-    { name: "Spring Boot", level: 90, color: "#6DB33F" },
+    { name: "Spring Boot", level: 85, color: "#6DB33F" },
     { name: "PHP (Laravel)", level: 65, color: "#7B7FB5" },
     { name: "MongoDB", level: 75, color: "#00694A" },
     { name: "PostgreSQL", level: 85, color: "#336791" },
     { name: "Supabase/Firebase", level: 85, color: "#44D093" },
-    { name: "NextAuth/Clerk", level: 75, color: "#BD30E5" },
+    { name: "NextAuth/Clerk", level: 80, color: "#BD30E5" },
   ];
 
   const other: Skill[] = [
-    { name: "Git/GitHub", level: 85, color: "#F05032" },
-    { name: "Stripe", level: 75, color: "#4285F4" },
+    { name: "Git/GitHub", level: 95, color: "#F05032" },
+    { name: "strapi", level: 85, color: "#4945ff" },
+    { name: "Neon DB", level: 85, color: "#34d59a" },
+    { name: "Arcjet", level: 80, color: "#000000" },
+    { name: "Socket.IO", level: 85, color: "#21af90" },
+    { name: "Stripe", level: 80, color: "#4285F4" },
     { name: "Vercel", level: 90, color: "#000000" },
     { name: "Zod", level: 80, color: "#3C9CD7" },
-    { name: "Shadcn UI", level: 85, color: "#000000" },
     { name: "Docker & Containerization", level: 80, color: "#0886AB" },
-    { name: "Figma", level: 85, color: "#F24E1E" },
   ];
 
   const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
