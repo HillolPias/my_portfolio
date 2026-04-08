@@ -59,11 +59,11 @@ const Skills: React.FC = () => {
 
   const other: Skill[] = [
     { name: "Git/GitHub", level: 95, color: "#F05032" },
-    { name: "strapi", level: 85, color: "#4945ff" },
+    { name: "strapi (CMS)", level: 85, color: "#4945ff" },
     { name: "Neon DB", level: 85, color: "#34d59a" },
     { name: "Arcjet", level: 80, color: "#000000" },
     { name: "Socket.IO", level: 85, color: "#21af90" },
-    { name: "Stripe (CMS)", level: 80, color: "#4285F4" },
+    { name: "Stripe", level: 80, color: "#4285F4" },
     { name: "Vercel", level: 90, color: "#000000" },
     { name: "Zod", level: 80, color: "#3C9CD7" },
     { name: "Docker & Containerization", level: 80, color: "#0886AB" },
