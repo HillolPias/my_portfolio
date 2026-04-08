@@ -49,9 +49,9 @@ const Experience: React.FC = () => {
       location: "Remote/On-site",
       period: "November 2021-December 2023",
       description: [
+        "Built RESTful APIs with Next.js and Node.js (Express), including real-time features with Socket.IO. Integrated with React.js/Next.js for seamless UX.",
+        "Explored and implemented Strapi CMS in personal projects for dynamic content management and API-driven architecture.",
         "Developed and maintained services using Java(Spring Boot, Spring Security, Spring MVC etc.) ensuring scalability and high performance",
-        "Built and optimized backend systems in PHP(Laravel), improving API response times by 25%",
-        "Designed REST APIs and integrated with front-end tech(React.js) to deliver seamless user experiences",
         "Implemented CI/CD pipelines and containerization with Docker, enhancing deployment efficiency",
       ],
     },
@@ -82,8 +82,16 @@ const Experience: React.FC = () => {
       title: "Freelance Full-Stack Developer",
       company: "Independent (Self-Learning & Projects)",
       location: "Dhaka, Bangladesh",
-      period: "October 2015-January 2020",
+      period: "October 2015-present",
       description: [
+        {
+          project: "AI Recipe Platform",
+          tech: "Next.js, Tailwind CSS, Strapi CMS, NeonDB-PostgreSQL, ShadCN UI",
+          points: [
+            "Built an AI-powered recipe platform using Next.js and Strapi CMS for dynamic content management.",
+            "Enabled non-technical users to manage recipes via a headless CMS and implemented a responsive UI.",
+          ],
+        },
         "Built multiple personal and academic-style projects, including e-commerce platforms, booking systems, and RESTful APIs, to strengthen backend development skills",
         "Explored frontend development with JavaScript, React, and Next.js, creating responsive interfaces and integrating them with backend APIs",
         "Designed and optimized databases(PostgreSQL, MongoDB, MySQL) for project use cases, enhancing understanding of relational and NoSQL systems",
@@ -149,15 +157,53 @@ const Experience: React.FC = () => {
                       {experience.company}
                     </h4>
                     <ul className="space-y-2">
-                      {experience.description.map((item, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-dark/70 dark:text-light/70"
-                        >
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
+                      {experience.description.map((item, idx) => {
+                        // ✅ Case 1: Normal string
+                        if (typeof item === "string") {
+                          return (
+                            <li
+                              key={idx}
+                              className="flex items-start gap-2 text-dark/70 dark:text-light/70"
+                            >
+                              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light flex-shrink-0" />
+                              {item}
+                            </li>
+                          );
+                        }
+
+                        // ✅ Case 2: Object with points
+                        if (typeof item === "object") {
+                          return (
+                            <li key={idx} className="space-y-2">
+                              {/* Project Title */}
+                              <div className="flex items-start gap-2">
+                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light flex-shrink-0" />
+                                <p className="font-medium text-dark dark:text-light">
+                                  {item.project}{" "}
+                                  <span className="text-sm text-dark/50 dark:text-light/50">
+                                    ({item.tech})
+                                  </span>
+                                </p>
+                              </div>
+
+                              {/* Sub points */}
+                              <ul className="ml-5 space-y-1 border-l border-primary/20 pl-3">
+                                {item.points.map((point, i) => (
+                                  <li
+                                    key={i}
+                                    className="flex items-start gap-2 text-dark/70 dark:text-light/70"
+                                  >
+                                    <span className="mt-2 w-1 h-1 rounded-full bg-primary/70 flex-shrink-0" />
+                                    {point}
+                                  </li>
+                                ))}
+                              </ul>
+                            </li>
+                          );
+                        }
+
+                        return null;
+                      })}
                     </ul>
                   </div>
                 </div>
