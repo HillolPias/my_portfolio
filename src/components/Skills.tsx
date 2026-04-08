@@ -63,7 +63,7 @@ const Skills: React.FC = () => {
     { name: "Neon DB", level: 85, color: "#34d59a" },
     { name: "Arcjet", level: 80, color: "#000000" },
     { name: "Socket.IO", level: 85, color: "#21af90" },
-    { name: "Stripe", level: 80, color: "#4285F4" },
+    { name: "Stripe (CMS)", level: 80, color: "#4285F4" },
     { name: "Vercel", level: 90, color: "#000000" },
     { name: "Zod", level: 80, color: "#3C9CD7" },
     { name: "Docker & Containerization", level: 80, color: "#0886AB" },
