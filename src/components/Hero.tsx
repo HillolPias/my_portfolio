@@ -79,8 +79,9 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-xl text-dark/70 dark:text-light/70 mb-8">
-              I design and build exceptional digital experiences that are fast,
-              accessible, and visually appealing.
+              I build scalable, AI-ready web applications using Next.js,
+              Node.js, Python & LLM APIs — open to remote opportunities
+              worldwide.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mb-8">
