@@ -1,7 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Code, Palette, Rocket } from "lucide-react";
+import {
+  Brain,
+  BrainCircuit,
+  BrainCircuitIcon,
+  Code,
+  Palette,
+  Rocket,
+} from "lucide-react";
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -35,23 +42,23 @@ const About: React.FC = () => {
   const services = [
     {
       icon: <Code className="w-6 h-6 text-primary dark:text-primary-light" />,
-      title: "Web & Mobile App Development",
+      title: "Full-Stack Development",
       description:
-        "Building responsive, accessible, and performant websites and web/mobile applications with modern technologies.",
+        "End-to-end web apps using Next.js, React, Node.js/Express, and Java (Spring Boot) — from API design to deployment.",
     },
     {
       icon: (
-        <Palette className="w-6 h-6 text-primary dark:text-primary-light" />
+        <BrainCircuitIcon className="w-6 h-6 text-primary dark:text-primary-light" />
       ),
-      title: "UI/UX Design",
+      title: "AI & LLM Integration",
       description:
-        "Creating intuitive and beautiful user interfaces that provide an exceptional user experience.",
+        "Building AI-powered features using OpenAI and Anthropic APIs — from prompt engineering to full product integration.",
     },
     {
       icon: <Rocket className="w-6 h-6 text-primary dark:text-primary-light" />,
-      title: "Performance Optimization",
+      title: "Cloud Deployment & DevOps",
       description:
-        "Enhancing website performance for faster load times and improved user satisfaction.",
+        "CI/CD pipelines, Docker, and deployments on AWS, Vercel, and Railway for scalable, production-ready services.",
     },
   ];
 
@@ -76,16 +83,17 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-8"></div>
             <p className="text-lg text-dark/70 dark:text-light/70 max-w-3xl mx-auto">
-              I'm a passionate developer with a strong focus on creating elegant
-              solutions that solve real-world problems. With over 10 years of
-              experience, I've worked on a wide range of projects across various
-              industries.
+              Full-Stack Developer with 4+ years of experience building
+              scalable, production-ready web applications. I specialize in the
+              JavaScript ecosystem — Next.js, React, Node.js — with additional
+              expertise in Java (Spring Boot), Python (FastAPI), and hands-on
+              LLM API integration for AI-powered products.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="relative w-full h-64 md:h-96 mb-6 rounded-xl overflow-hidden">
+              <div className="relative w-full h-64 md:h-96 mb-6 rounded-xl overflow-hidden mt-6">
                 <motion.img
                   src="/hillol-profile-pic.jpeg"
                   alt="Profile"
@@ -101,21 +109,24 @@ const About: React.FC = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               <p className="text-dark/70 dark:text-light/70">
-                I started my journey as a self-taught developer, learning
-                through countless hours of tutorials, documentation, and
-                building projects. My curiosity and passion for technology have
-                been the driving forces behind my growth.
+                I started as a self-taught developer — building real projects,
+                reading docs, and learning by shipping. What began with
+                freelance work in 2015 grew into professional full-stack roles
+                where I've architected APIs, built CMS platforms, integrated
+                payment systems, and deployed cloud-ready applications.
               </p>
               <p className="text-dark/70 dark:text-light/70">
-                Over the years, I've honed my skills in various technologies and
-                frameworks, always staying at the forefront of innovation. I
-                believe in writing clean, maintainable code and creating
-                intuitive user experiences.
+                Over the years I've worked across the full stack — from
+                responsive React UIs to Node.js backends, Spring Boot
+                microservices, and PostgreSQL databases. Recently I've been
+                integrating LLM APIs (OpenAI, Anthropic) into production apps,
+                which is where I see the most exciting opportunities right now.
               </p>
               <p className="text-dark/70 dark:text-light/70">
-                When I'm not coding, you can find me exploring new technologies,
-                contributing to open-source projects, or enjoying outdoor
-                activities.
+                When I'm not coding, I'm exploring what's new in the AI/dev
+                tooling space, experimenting with side projects, or contributing
+                to open-source. I'm currently open to remote full-stack or
+                backend roles with global teams.
               </p>
             </motion.div>
           </div>

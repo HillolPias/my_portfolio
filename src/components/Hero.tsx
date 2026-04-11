@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Twitter, FileDown } from "lucide-react";
 import { cn } from "../lib/utils";
+import { AIReadyChip } from "../components/AIReadyChip";
 
 const Hero: React.FC = () => {
   const containerVariants = {
@@ -68,15 +69,13 @@ const Hero: React.FC = () => {
           >
             <div className="mb-4">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light text-sm font-medium inline-block">
-                Full Stack Developer (Web & Mobile App)
+                Full-Stack Developer | Next.js · Node.js · Python · LLM APIs
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Creating Beautiful Digital{" "}
-              <span className="dark:text-purple-200/90 text-violet-900/50">
-                Experiences
-              </span>
+              Building Scalable, <AIReadyChip /> <br />
+              Web Applications
             </h1>
 
             <p className="text-xl text-dark/70 dark:text-light/70 mb-8">
