@@ -30,29 +30,28 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
-      title: "Full-Stack Development Specialist",
+      title: "Full-Stack Developer",
       company: "SwaPE IT Solutions",
       location: "Remote",
       period: "December 2023-Present",
       description: [
-        "Built and maintaining a beautiful, modern, sleek, and scalable full-stack website for this company",
-        "Designed efficient, modular systems with a focus on performance, scalability, and maintainability.",
-        "Integrated third-party APIs and optimized development workflows with modern tools and automation.",
+        "Architected and shipped production web apps using Next.js 14 (App Router), Node.js, and React with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
+        "Led system design decisions and defined scalable architecture patterns across multiple client projects.",
+        "Improved code quality through automated tooling, linting, peer reviews, and performance profiling.",
         "Ensured high code quality through best practices, performance tuning, and consistent code reviews.",
-        "Improved application performance by 40% through optimization",
-        "Reduced deployment time by 60%",
+        "Integrated third-party services and APIs, reducing development time by establishing reusable integration patterns.",
       ],
     },
     {
-      title: "Software Developer",
+      title: "Full-Stack Developer",
       company: "Raj IT Solutions Ltd.",
       location: "Remote/On-site",
       period: "November 2021-December 2023",
       description: [
-        "Built RESTful APIs with Next.js and Node.js (Express), including real-time features with Socket.IO. Integrated with React.js/Next.js for seamless UX.",
-        "Explored and implemented Strapi CMS in personal projects for dynamic content management and API-driven architecture.",
-        "Developed and maintained services using Java(Spring Boot, Spring Security, Spring MVC etc.) ensuring scalability and high performance",
-        "Implemented CI/CD pipelines and containerization with Docker, enhancing deployment efficiency",
+        "Built RESTful APIs with Next.js and Node.js (Express) and implemented real-time features using Socket.IO, serving concurrent users without performance degradation.",
+        "Developed and maintained microservices using Java (Spring Boot), ensuring high availability and horizontal scalability.",
+        "Integrated Strapi headless CMS enabling non-technical stakeholders to manage content without developer intervention.",
+        "Established CI/CD pipelines with Docker, cutting deployment time significantly and reducing production incidents.",
       ],
     },
     {
@@ -75,7 +74,7 @@ const Experience: React.FC = () => {
       location: "Dhaka, Bangladesh",
       period: "January 2020-October 2021",
       description: [
-        "Graphic Design and Animation(Adobe Illustrator, InDesign, Photoshop, Canva, Premier Pro, After Effects etc.)",
+        "Designed digital assets and social media content; developed strong visual communication and client-facing skills directly applicable to frontend UI work.",
       ],
     },
     {
@@ -84,17 +83,9 @@ const Experience: React.FC = () => {
       location: "Dhaka, Bangladesh",
       period: "October 2015-present",
       description: [
-        {
-          project: "AI Recipe Platform",
-          tech: "Next.js, Tailwind CSS, Strapi CMS, NeonDB-PostgreSQL, ShadCN UI",
-          points: [
-            "Built an AI-powered recipe platform using Next.js and Strapi CMS for dynamic content management.",
-            "Enabled non-technical users to manage recipes via a headless CMS and implemented a responsive UI.",
-          ],
-        },
-        "Built multiple personal and academic-style projects, including e-commerce platforms, booking systems, and RESTful APIs, to strengthen backend development skills",
-        "Explored frontend development with JavaScript, React, and Next.js, creating responsive interfaces and integrating them with backend APIs",
-        "Designed and optimized databases(PostgreSQL, MongoDB, MySQL) for project use cases, enhancing understanding of relational and NoSQL systems",
+        "Built an AI-powered recipe platform (Next.js, Strapi CMS, Neon/PostgreSQL, ShadCN UI) — letting non-technical users manage content through a headless CMS with a fully responsive UI.",
+        "Delivered e-commerce and booking systems using Node.js, React, and Next.js with Stripe payment integration, role-based access control, and RESTful APIs.",
+        "Designed and optimized PostgreSQL, MongoDB, and MySQL databases for scalable, production-ready applications.",
       ],
     },
   ];

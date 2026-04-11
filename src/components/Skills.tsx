@@ -50,9 +50,9 @@ const Skills: React.FC = () => {
     { name: "Express", level: 90, color: "#373737" },
     { name: "Java", level: 85, color: "#E34F26" },
     { name: "Spring Boot", level: 85, color: "#6DB33F" },
-    { name: "PHP (Laravel)", level: 65, color: "#7B7FB5" },
-    { name: "MongoDB", level: 75, color: "#00694A" },
-    { name: "PostgreSQL", level: 85, color: "#336791" },
+    { name: "Python", level: 70, color: "#7B7FB5" },
+    { name: "FastAPI", level: 65, color: "#00694A" },
+    { name: "PostgreSQL/MongoDB/MySQL", level: 85, color: "#336791" },
     { name: "Supabase/Firebase", level: 85, color: "#44D093" },
     { name: "NextAuth/Clerk", level: 80, color: "#BD30E5" },
   ];

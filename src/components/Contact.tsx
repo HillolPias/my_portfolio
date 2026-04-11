@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID, // <-- Replace with your EmailJS Service ID
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // <-- Replace with your EmailJS Public Key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // <-- Replace with your EmailJS Public Key
       )
       .then(() => {
         setIsSubmitting(false);
@@ -165,7 +165,7 @@ const Contact: React.FC = () => {
     {
       icon: <MapPin className="w-5 h-5 text-primary dark:text-primary-light" />,
       title: "Location",
-      value: "Rajshahi, Bangladesh",
+      value: "Dhaka, Bangladesh",
       link: "https://maps.app.goo.gl/Ltgtxy6dkgaeLhF38",
     },
   ];

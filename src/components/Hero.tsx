@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
           "absolute inset-0",
           "[background-size:40px_40px]",
           "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
-          "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+          "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
         )}
       />
       {/* Radial gradient for the container to give a faded look */}
@@ -173,11 +173,11 @@ const Hero: React.FC = () => {
                 }}
               />
               <motion.img
-                src="/profile.jpg"
+                src="/hillol-profile-pic.jpeg"
                 alt="Profile"
                 className="relative w-full h-full object-cover rounded-3xl shadow-xl"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
+                initial={{ scale: 1.2, opacity: 0 }}
+                animate={{ scale: 1.4, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               />
             </div>

@@ -87,7 +87,7 @@ const About: React.FC = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <div className="relative w-full h-64 md:h-96 mb-6 rounded-xl overflow-hidden">
                 <motion.img
-                  src="/profile.jpg"
+                  src="/hillol-profile-pic.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                   initial={{ scale: 1.2 }}
