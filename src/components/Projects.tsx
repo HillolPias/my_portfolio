@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "CookMind - AI Recipe Generator",
     description:
-      "a Full Stack AI Recipe Platform SaaS App built with Next.Js 16 with Tailwind CSS, Strapi as Headless CMS, PostgreSQL-NeonDB, Google Authentication, Arcjet, Shadcn UI",
+      "A Full Stack AI Recipe Platform SaaS App built with Next.Js 16 with Tailwind CSS, Strapi as Headless CMS, PostgreSQL-NeonDB, Google Authentication, Arcjet, Shadcn UI",
     image: "/cookmind-screenshot.png",
     tags: [
       "Next.js",
