@@ -170,7 +170,7 @@ const Experience: React.FC = () => {
                               <div className="flex items-start gap-2">
                                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light flex-shrink-0" />
                                 <p className="font-medium text-dark dark:text-light">
-                                  {item.project:}{" "}
+                                  {item.project}{" "}
                                   <span className="text-sm text-dark/50 dark:text-light/50">
                                     ({item.tech})
                                   </span>
