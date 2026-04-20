@@ -1,14 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {
-  Brain,
-  BrainCircuit,
-  BrainCircuitIcon,
-  Code,
-  Palette,
-  Rocket,
-} from "lucide-react";
+import { BrainCircuitIcon, Code, Rocket } from "lucide-react";
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
