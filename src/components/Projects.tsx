@@ -23,7 +23,7 @@ const projects = [
       "Tailwind CSS",
       "Shadcn UI",
     ],
-    category: "web",
+    category: "ai",
     github: "https://github.com/HillolPias/cookmind",
     demo: "https://cookmind-ivory.vercel.app/",
   },

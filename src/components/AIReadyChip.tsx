@@ -11,7 +11,7 @@ export function AIReadyChip() {
       {/* pulsing dot */}
       <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 animate-pulse" />
       {/* text */}
-      <span className="text-emerald-400 font-medium">AI-Ready</span>
+      <span className="text-emerald-400 font-medium">AI-Native</span>
     </span>
   );
 }

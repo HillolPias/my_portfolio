@@ -69,7 +69,8 @@ const Hero: React.FC = () => {
           >
             <div className="mb-4">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light text-sm font-medium inline-block">
-                Full-Stack Developer | Next.js · Node.js · Python · LLM APIs
+                AI-Native Full-Stack Engineer | LangChain · Agents · Next.js ·
+                FastAPI · Open to Remote
               </span>
             </div>
 
@@ -79,9 +80,9 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-xl text-dark/70 dark:text-light/70 mb-8">
-              I build scalable, AI-ready web applications using Next.js,
-              Node.js, Python & LLM APIs — open to remote opportunities
-              worldwide.
+              I build full-stack web applications and LLM-powered products —
+              using Next.js, Node.js, FastAPI, and LangChain agents. Open to
+              remote opportunities worldwide.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mb-8">

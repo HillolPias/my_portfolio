@@ -36,9 +36,9 @@ const Experience: React.FC = () => {
       period: "December 2023-Present",
       description: [
         "Architected and shipped production web apps using Next.js 14 (App Router), Node.js, and React with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
+        "Integrated Anthropic and OpenAI APIs into client-facing features — hands-on with prompt engineering, tool use, and AI-powered product workflows.",
         "Led system design decisions and defined scalable architecture patterns across multiple client projects.",
         "Improved code quality through automated tooling, linting, peer reviews, and performance profiling.",
-        "Ensured high code quality through best practices, performance tuning, and consistent code reviews.",
         "Integrated third-party services and APIs, reducing development time by establishing reusable integration patterns.",
       ],
     },
@@ -54,18 +54,30 @@ const Experience: React.FC = () => {
         "Established CI/CD pipelines with Docker, cutting deployment time significantly and reducing production incidents.",
       ],
     },
+    // {
+    //   title: "Chief Executive Officer (CEO)",
+    //   company: "LearnOn - Online Education Platform",
+    //   location: "Rajshahi, Bangladesh",
+    //   period: "January 2021-July 2022",
+    //   description: [
+    //     "Video Editing and Animation(Adobe Premier Pro, After Effects etc.)",
+    //     "Content Creation, Script Writing & Monitoring Team Activities",
+    //     "Graphic Design(Adobe Illustrator, InDesign, Photoshop, Canva etc.)",
+    //     "Sound Designing(Adobe Audition etc.)",
+    //     "Human Resource Management, Planning & Budgeting",
+    //     "Managing Social Media and SEO",
+    //   ],
+    // },
+
     {
-      title: "Chief Executive Officer (CEO)",
-      company: "LearnOn - Online Education Platform",
-      location: "Rajshahi, Bangladesh",
-      period: "January 2021-July 2022",
+      title: "Freelance Full-Stack Developer",
+      company: "Independent (Self-Learning & Projects)",
+      location: "Dhaka, Bangladesh",
+      period: "October 2015-present",
       description: [
-        "Video Editing and Animation(Adobe Premier Pro, After Effects etc.)",
-        "Content Creation, Script Writing & Monitoring Team Activities",
-        "Graphic Design(Adobe Illustrator, InDesign, Photoshop, Canva etc.)",
-        "Sound Designing(Adobe Audition etc.)",
-        "Human Resource Management, Planning & Budgeting",
-        "Managing Social Media and SEO",
+        "Built an AI-powered recipe platform (Next.js, Strapi CMS, Neon/PostgreSQL, ShadCN UI) with LangChain agents, RAG pipelines, and LangGraph state machines integrated into the backend.",
+        "Delivered e-commerce and booking systems using Node.js, React, and Next.js with Stripe payment integration, role-based access control, and RESTful APIs.",
+        "Designed and optimized PostgreSQL, MongoDB, and MySQL databases for scalable, production-ready applications.",
       ],
     },
     {
@@ -75,17 +87,6 @@ const Experience: React.FC = () => {
       period: "January 2020-October 2021",
       description: [
         "Designed digital assets and social media content; developed strong visual communication and client-facing skills directly applicable to frontend UI work.",
-      ],
-    },
-    {
-      title: "Freelance Full-Stack Developer",
-      company: "Independent (Self-Learning & Projects)",
-      location: "Dhaka, Bangladesh",
-      period: "October 2015-present",
-      description: [
-        "Built an AI-powered recipe platform (Next.js, Strapi CMS, Neon/PostgreSQL, ShadCN UI) — letting non-technical users manage content through a headless CMS with a fully responsive UI.",
-        "Delivered e-commerce and booking systems using Node.js, React, and Next.js with Stripe payment integration, role-based access control, and RESTful APIs.",
-        "Designed and optimized PostgreSQL, MongoDB, and MySQL databases for scalable, production-ready applications.",
       ],
     },
   ];

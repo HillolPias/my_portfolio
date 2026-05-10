@@ -37,7 +37,7 @@ const About: React.FC = () => {
       icon: <Code className="w-6 h-6 text-primary dark:text-primary-light" />,
       title: "Full-Stack Development",
       description:
-        "End-to-end web apps using Next.js, React, Node.js/Express, and Java (Spring Boot) — from API design to deployment.",
+        "End-to-end web apps using Next.js, React, TypeScript, Node.js/Express, and FastAPI — from API design to containerised deployment.",
     },
     {
       icon: (
@@ -45,13 +45,13 @@ const About: React.FC = () => {
       ),
       title: "AI & LLM Integration",
       description:
-        "Building AI-powered features using OpenAI and Anthropic APIs — from prompt engineering to full product integration.",
+        "Building LLM-powered products with LangChain, LangGraph, RAG pipelines, tool use, and multi-agent systems — from Anthropic & OpenAI APIs to full product integration.",
     },
     {
       icon: <Rocket className="w-6 h-6 text-primary dark:text-primary-light" />,
       title: "Cloud Deployment & DevOps",
       description:
-        "CI/CD pipelines, Docker, and deployments on AWS, Vercel, and Railway for scalable, production-ready services.",
+        "CI/CD pipelines with GitHub Actions, Docker, and deployments on Vercel and Railway — shipping production-ready, containerised services.",
     },
   ];
 
@@ -76,11 +76,11 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-8"></div>
             <p className="text-lg text-dark/70 dark:text-light/70 max-w-3xl mx-auto">
-              Full-Stack Developer with 4+ years of experience building
-              scalable, production-ready web applications. I specialize in the
-              JavaScript ecosystem — Next.js, React, Node.js — with additional
-              expertise in Java (Spring Boot), Python (FastAPI), and hands-on
-              LLM API integration for AI-powered products.
+              AI-native full-stack engineer with 4+ years of experience building
+              production web applications and LLM-powered products. I specialise
+              in Next.js, React, Node.js, and FastAPI — with hands-on experience
+              in LangChain, LangGraph, RAG pipelines, tool use, AI agents, and
+              multi-agent systems.
             </p>
           </motion.div>
 
@@ -111,15 +111,17 @@ const About: React.FC = () => {
               <p className="text-dark/70 dark:text-light/70">
                 Over the years I've worked across the full stack — from
                 responsive React UIs to Node.js backends, Spring Boot
-                microservices, and PostgreSQL databases. Recently I've been
-                integrating LLM APIs (OpenAI, Anthropic) into production apps,
-                which is where I see the most exciting opportunities right now.
+                microservices, and PostgreSQL databases. More recently I've gone
+                deep on the AI layer: LangChain, LangGraph state machines, RAG
+                pipelines, tool use, function calling, and multi-agent systems —
+                built and shipped, not just studied.
               </p>
               <p className="text-dark/70 dark:text-light/70">
-                When I'm not coding, I'm exploring what's new in the AI/dev
-                tooling space, experimenting with side projects, or contributing
-                to open-source. I'm currently open to remote full-stack or
-                backend roles with global teams.
+                When I'm not coding, I'm building in public — working on an
+                open-source LangGraph agent with RAG retrieval, tool use, and
+                token-by-token streaming via FastAPI. I'm currently open to
+                remote roles at AI-product companies where I can own the full
+                stack and the LLM integration layer.
               </p>
             </motion.div>
           </div>
