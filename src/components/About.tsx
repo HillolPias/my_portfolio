@@ -86,7 +86,7 @@ const About: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="relative w-full h-64 md:h-96 mb-6 rounded-xl overflow-hidden mt-6">
+              <div className="relative w-full h-64 md:h-96 mb-3 rounded-xl overflow-hidden mt-16">
                 <motion.img
                   src="/hillol-profile-pic.jpeg"
                   alt="Profile"
@@ -102,26 +102,30 @@ const About: React.FC = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               <p className="text-dark/70 dark:text-light/70">
-                I started as a self-taught developer — building real projects,
-                reading docs, and learning by shipping. What began with
-                freelance work in 2015 grew into professional full-stack roles
-                where I've architected APIs, built CMS platforms, integrated
-                payment systems, and deployed cloud-ready applications.
+                I started as a self-taught developer in 2015 — freelancing,
+                reading docs, learning by shipping. That grew into full-stack
+                roles where I've architected APIs, built CMS platforms,
+                integrated payments, and deployed cloud-ready applications.
               </p>
               <p className="text-dark/70 dark:text-light/70">
-                Over the years I've worked across the full stack — from
-                responsive React UIs to Node.js backends, Spring Boot
-                microservices, and PostgreSQL databases. More recently I've gone
-                deep on the AI layer: LangChain, LangGraph state machines, RAG
-                pipelines, tool use, function calling, and multi-agent systems —
-                built and shipped, not just studied.
+                I've worked the full stack: React UIs, Node.js and FastAPI
+                backends, PostgreSQL and MongoDB. More recently I've gone deep
+                on the AI layer — LangChain, LangGraph orchestration and state
+                machines, RAG pipelines with vector embeddings, tool use and
+                function calling, multi-agent systems, and LangSmith for tracing
+                and debugging — built and shipped, not just studied.
               </p>
               <p className="text-dark/70 dark:text-light/70">
-                When I'm not coding, I'm building in public — working on an
-                open-source LangGraph agent with RAG retrieval, tool use, and
-                token-by-token streaming via FastAPI. I'm currently open to
-                remote roles at AI-product companies where I can own the full
-                stack and the LLM integration layer.
+                Core stack: React · Next.js · TypeScript · Node.js · FastAPI ·
+                Rest API · PostgreSQL · MongoDB · LangChain/LangGraph · RAG ·
+                Vector Embeddings · Multi-Agent Systems · LangSmith ·
+                Orchestration · Docker
+              </p>
+              <p className="text-dark/70 dark:text-light/70">
+                Right now I'm building in public — an open-source LangGraph
+                agent with RAG retrieval and tool use, FastAPI backend, Next.js
+                frontend. Open to remote roles at AI-product companies where I
+                can own the full stack and the LLM integration layer.
               </p>
             </motion.div>
           </div>

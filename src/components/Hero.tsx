@@ -69,8 +69,8 @@ const Hero: React.FC = () => {
           >
             <div className="mb-4">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light text-sm font-medium inline-block">
-                AI-Native Full-Stack Engineer | LangChain · Agents · Next.js ·
-                FastAPI · Open to Remote
+                AI-Native Full-Stack Engineer · LangGraph · LangChain · RAG ·
+                ReAct Agents | Next.js · FastAPI · SQL/NoSQL | Open to Remote
               </span>
             </div>
 
@@ -81,11 +81,12 @@ const Hero: React.FC = () => {
 
             <p className="text-xl text-dark/70 dark:text-light/70 mb-8">
               I build full-stack web applications and LLM-powered products —
-              using Next.js, Node.js, FastAPI, and LangChain agents. Open to
-              remote opportunities worldwide.
+              LangGraph(LangChain) ReAct agents, RAG pipelines with vector
+              embeddings, and SQL/NoSQL data layers, wired end-to-end with
+              Next.js and FastAPI. Open to remote opportunities worldwide.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mb-4">
               <motion.a
                 href="#contact"
                 onClick={(e) => {
@@ -112,7 +113,7 @@ const Hero: React.FC = () => {
               </motion.a>
             </div>
 
-            <div className="flex justify-center md:justify-start items-center gap-4 mb-12">
+            <div className="flex justify-center md:justify-start items-center gap-4 mb-8">
               <motion.a
                 href="#projects"
                 onClick={(e) => {
@@ -129,7 +130,7 @@ const Hero: React.FC = () => {
               </motion.a>
             </div>
 
-            <div className="flex justify-center md:justify-start items-center gap-4 ">
+            <div className="flex justify-center md:justify-start items-center gap-4 mb-6">
               {[
                 {
                   icon: <Github size={20} />,
