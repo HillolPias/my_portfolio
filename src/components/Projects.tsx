@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "Ledger - AI-Powered Task Manager",
     description:
-      "A Full Stack Task & Project Management App with an AI Assistant, built with FastAPI, SQLAlchemy (async), PostgreSQL-NeonDB, Alembic, Next.js 15, Tailwind CSS, LangChain, LangGraph, Google Gemini, and RAG-based retrieval with ChromaDB",
+      "A Full Stack Task & Project Management App with an AI Assistant, built with FastAPI, SQLAlchemy (async), PostgreSQL-NeonDB, Alembic, Next.js 15, Tailwind CSS, LangChain, LangGraph, OpenAI, and RAG-based retrieval with ChromaDB",
     image: "/Ledger-AI-task-manager.png",
     tags: [
       "FastAPI",
@@ -23,7 +23,7 @@ const projects = [
       "Tailwind CSS",
       "LangChain",
       "LangGraph",
-      "Google Gemini",
+      "OpenAI",
       "RAG",
       "ChromaDB",
     ],
@@ -35,7 +35,7 @@ const projects = [
     id: 2,
     title: "CookMind - AI Recipe Generator",
     description:
-      "A Full Stack AI Recipe Platform SaaS App built with Next.Js 16 with Tailwind CSS, Strapi as Headless CMS, PostgreSQL-NeonDB, Google Authentication, Arcjet, Shadcn UI",
+      "A Full Stack AI Recipe Platform SaaS App built with Next.Js 16 with Tailwind CSS, Strapi as Headless CMS, PostgreSQL-NeonDB, Google Gemini, Google Authentication, Arcjet, Shadcn UI",
     image: "/cookmind-screenshot.png",
     tags: [
       "Next.js",
@@ -44,6 +44,7 @@ const projects = [
       "Express.js",
       "PostgreSQL",
       "NeonDB",
+      "Google Gemini",
       "Google Authentication",
       "Arcjet",
       "Tailwind CSS",

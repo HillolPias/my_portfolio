@@ -238,7 +238,7 @@ const Skills: React.FC = () => {
     { name: "Git/GitHub", level: 95, color: "#F05032" },
     { name: "GitHub Actions", level: 85, color: "#2088FF" },
     { name: "Docker", level: 80, color: "#0886AB" },
-    { name: "Vercel / Railway", level: 90, color: "#000000" },
+    { name: "Vercel/Render/Railway", level: 90, color: "#000000" },
     { name: "Strapi (CMS)", level: 85, color: "#4945ff" },
     { name: "Neon DB", level: 85, color: "#34d59a" },
     { name: "Stripe", level: 80, color: "#4285F4" },

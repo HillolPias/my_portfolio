@@ -51,7 +51,7 @@ const About: React.FC = () => {
       icon: <Rocket className="w-6 h-6 text-primary dark:text-primary-light" />,
       title: "Cloud Deployment & DevOps",
       description:
-        "CI/CD pipelines with GitHub Actions, Docker, and deployments on Vercel and Railway — shipping production-ready, containerised services.",
+        "CI/CD pipelines with GitHub Actions, Docker, and deployments on Vercel, Render and Railway — shipping production-ready, containerised services.",
     },
   ];
 

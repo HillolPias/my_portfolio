@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
       location: "Remote",
       period: "December 2023-Present",
       description: [
-        "Architected and shipped production web apps using Next.js 14 (App Router), Node.js, and React with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
+        "Architected and shipped production web apps using Next.js(App Router), Node.js, and React with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
         "Integrated Anthropic and OpenAI APIs into client-facing features — hands-on with prompt engineering, tool use, and AI-powered product workflows.",
         "Led system design decisions and defined scalable architecture patterns across multiple client projects.",
         "Improved code quality through automated tooling, linting, peer reviews, and performance profiling.",
@@ -75,7 +75,8 @@ const Experience: React.FC = () => {
       location: "Dhaka, Bangladesh",
       period: "October 2015-present",
       description: [
-        "Built an AI-powered recipe platform (Next.js, Strapi CMS, Neon/PostgreSQL, ShadCN UI) with LangChain agents, RAG pipelines, and LangGraph state machines integrated into the backend.",
+        "Built a Full Stack Task & Project Management App with an AI Assistant, built with FastAPI, SQLAlchemy (async), PostgreSQL-NeonDB, Alembic, Next.js 15, Tailwind CSS, LangChain, LangGraph, OpenAI, and RAG-based retrieval with ChromaDB",
+        "Built a Full Stack AI Recipe Platform SaaS App with Next.Js 16 with Tailwind CSS, Strapi as Headless CMS, PostgreSQL-NeonDB, Google Gemini,Google Authentication, Arcjet, Shadcn UI",
         "Delivered e-commerce and booking systems using Node.js, React, and Next.js with Stripe payment integration, role-based access control, and RESTful APIs.",
         "Designed and optimized PostgreSQL, MongoDB, and MySQL databases for scalable, production-ready applications.",
       ],
