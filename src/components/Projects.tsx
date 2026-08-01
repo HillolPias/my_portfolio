@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: "Ledger - AI-Powered Task Manager",
     description:
-      "A Full Stack Task & Project Management App with an AI Assistant, built with FastAPI, SQLAlchemy (async), PostgreSQL-NeonDB, Alembic, Next.js 15, Tailwind CSS, LangChain, LangGraph, OpenAI, and RAG-based retrieval with ChromaDB",
+      "A Full Stack Task & Project Management App with an AI Assistant, built with FastAPI, SQLAlchemy (Async), PostgreSQL (NeonDB), Alembic, Next.js 15, Tailwind CSS, LangChain, LangGraph, LangSmith (tracing & observability), OpenAI, and RAG-based retrieval with ChromaDB.",
     image: "/Ledger-AI-task-manager.png",
     tags: [
       "FastAPI",
