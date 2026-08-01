@@ -23,6 +23,7 @@ const projects = [
       "Tailwind CSS",
       "LangChain",
       "LangGraph",
+      "LangSmith",
       "OpenAI",
       "RAG",
       "ChromaDB",
