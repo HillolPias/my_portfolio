@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
       location: "Remote",
       period: "December 2023-Present",
       description: [
-        "Architected and shipped production web apps using Next.js(App Router), Node.js, and React, and Python (FastAPI) services, with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
+        "Architected and shipped production web apps using Next.js(App Router), Node.js, React and Python (FastAPI) services, with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
         "Integrated Anthropic and OpenAI APIs into client-facing features — hands-on with prompt engineering, tool use, and AI-powered product workflows.",
         "Led system design decisions and defined scalable architecture patterns across multiple client projects.",
         "Improved code quality through automated tooling, linting, peer reviews, and performance profiling.",
@@ -206,7 +206,7 @@ const Experience: React.FC = () => {
                                 <p className="font-medium text-dark dark:text-light">
                                   {item.project}{" "}
                                   <span className="text-sm text-dark/50 dark:text-light/50">
-                                    ({item.tech})
+                                    ({item.tech.join(" · ")})
                                   </span>
                                 </p>
                               </div>

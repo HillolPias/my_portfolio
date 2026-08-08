@@ -80,7 +80,10 @@ const About: React.FC = () => {
               building production web applications and LLM-powered products. I
               specialise in Next.js, React, Node.js/Express, and FastAPI — with
               hands-on experience in LangChain, LangGraph, RAG pipelines, tool
-              use, AI agents (ReAct), and multi-agent systems."
+              use, AI agents (ReAct), multi-agent systems, and LangSmith tracing
+              across the Anthropic, OpenAI, and Gemini APIs. I also bring
+              working knowledge of system design fundamentals — caching, load
+              balancing, CDNs, message queues — and cloud deployment on AWS.
             </p>
           </motion.div>
 
