@@ -70,7 +70,8 @@ const Hero: React.FC = () => {
             <div className="mb-4">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light text-sm font-medium inline-block">
                 AI-Native Full-Stack Engineer · LangGraph · LangChain · RAG ·
-                ReAct Agents | Next.js · FastAPI · SQL/NoSQL | Open to Remote
+                ReAct Agents | Next.js · FastAPI · Node/Express.js · SQL/NoSQL |
+                Open to Remote
               </span>
             </div>
 
@@ -104,7 +105,7 @@ const Hero: React.FC = () => {
               <motion.a
                 href="/Hillol_Das_Pias_Resume_AI_Native.pdf"
                 download
-                className="px-8 py-3 bg-secondary text-white rounded-lg shadow-md hover:bg-secondary-dark transition-colors duration-300 text-lg font-medium flex items-center gap-2"
+                className="px-8 py-3 bg-secondary text-stone-600 rounded-lg shadow-md hover:bg-secondary-dark transition-colors duration-300 text-lg font-medium flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

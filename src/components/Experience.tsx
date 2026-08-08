@@ -35,7 +35,7 @@ const Experience: React.FC = () => {
       location: "Remote",
       period: "December 2023-Present",
       description: [
-        "Architected and shipped production web apps using Next.js(App Router), Node.js, and React with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
+        "Architected and shipped production web apps using Next.js(App Router), Node.js, and React, and Python (FastAPI) services, with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
         "Integrated Anthropic and OpenAI APIs into client-facing features — hands-on with prompt engineering, tool use, and AI-powered product workflows.",
         "Led system design decisions and defined scalable architecture patterns across multiple client projects.",
         "Improved code quality through automated tooling, linting, peer reviews, and performance profiling.",
@@ -48,7 +48,7 @@ const Experience: React.FC = () => {
       location: "Remote/On-site",
       period: "November 2021-December 2023",
       description: [
-        "Built RESTful APIs with Next.js and Node.js (Express) and implemented real-time features using Socket.IO, serving concurrent users without performance degradation.",
+        "Built RESTful APIs with Next.js and Node.js (Express), and Python (FastAPI): implemented real-time features using Socket.IO, serving concurrent users without performance degradation.",
         "Developed and maintained microservices using Java (Spring Boot), ensuring high availability and horizontal scalability.",
         "Integrated Strapi headless CMS enabling non-technical stakeholders to manage content without developer intervention.",
         "Established CI/CD pipelines with Docker, cutting deployment time significantly and reducing production incidents.",
@@ -75,8 +75,40 @@ const Experience: React.FC = () => {
       location: "Dhaka, Bangladesh",
       period: "October 2015-present",
       description: [
-        "Built a Full Stack Task & Project Management App with an AI Assistant, built with FastAPI, SQLAlchemy (async), PostgreSQL-NeonDB, Alembic, Next.js 15, Tailwind CSS, LangChain, LangGraph, OpenAI, and RAG-based retrieval with ChromaDB",
-        "Built a Full Stack AI Recipe Platform SaaS App with Next.Js 16 with Tailwind CSS, Strapi as Headless CMS, PostgreSQL-NeonDB, Google Gemini,Google Authentication, Arcjet, Shadcn UI",
+        {
+          project: "Ledger — AI Agent Task & Project Manager",
+          tech: [
+            "Next.js",
+            "FastAPI",
+            "async SQLAlchemy",
+            "PostgreSQL",
+            "LangGraph",
+            "ChromaDB",
+            "LangSmith",
+          ],
+          points: [
+            "Built a LangGraph-orchestrated ReAct agent that reasons over and selects from 17 tools in a loop — creating/updating tasks and projects and answering questions grounded in live database retrieval (RAG via ChromaDB) rather than static prompting.",
+            "Streamed agent responses token-by-token to the frontend via astream_events, with every run traced end-to-end in LangSmith for observability and debugging.",
+            "Backend built on FastAPI, async SQLAlchemy 2.0, and PostgreSQL (Neon) with Alembic migrations; deployed on Render alongside a separate Next.js frontend.",
+          ],
+        },
+        {
+          project: "Cookmind — AI Recipe Generator",
+          tech: [
+            "Next.js",
+            "React",
+            "Google Gemini API",
+            "Strapi",
+            "PostgreSQL",
+            "Clerk",
+            "Arcjet",
+          ],
+          points: [
+            "Built an AI recipe generator that analyses a photo of a user's ingredients via the Google Generative AI (Gemini) API and returns tailored, ready-to-cook recipes.",
+            "Implemented drag-and-drop ingredient photo upload and PDF export of generated recipes.",
+            "Implemented Clerk-based authentication and Arcjet bot/rate-limit protection on a Next.js frontend, backed by a Strapi headless CMS on PostgreSQL.",
+          ],
+        },
         "Delivered e-commerce and booking systems using Node.js, React, and Next.js with Stripe payment integration, role-based access control, and RESTful APIs.",
         "Designed and optimized PostgreSQL, MongoDB, and MySQL databases for scalable, production-ready applications.",
       ],
