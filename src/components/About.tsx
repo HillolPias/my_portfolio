@@ -276,9 +276,11 @@ const About: React.FC = () => {
         "LangSmith",
       ],
       points: [
-        "Built a LangGraph-orchestrated ReAct agent that reasons over and selects from 17 tools in a loop — creating/updating tasks and projects and answering questions grounded in live database retrieval (RAG via ChromaDB) rather than static prompting.",
-        "Streamed agent responses token-by-token to the frontend via astream_events, with every run traced end-to-end in LangSmith for observability and debugging.",
-        "Backend built on FastAPI, async SQLAlchemy 2.0, and PostgreSQL (Neon) with Alembic migrations; deployed on Render alongside a separate Next.js frontend.",
+        "Built a ReAct-style AI agent (LangGraph) with 17 tools for CRUD operations and RAG-based semantic search (ChromaDB), streaming responses token-by-token; traced end-to-end in LangSmith.",
+        "Designed async REST API (FastAPI, SQLAlchemy 2.0) with Alembic migrations, deployed on PostgreSQL (Neon).",
+        "Built full CI/CD pipeline (GitHub Actions): automated pytest suite against ephemeral Postgres gates both Docker image builds (Docker Hub) and production deploys (Render).",
+        "Containerized with Docker + Docker Compose for reproducible local development.",
+        "Built custom-designed Next.js/TypeScript frontend with live-streaming chat UI.",
       ],
     },
     {
