@@ -70,21 +70,21 @@ const Hero: React.FC = () => {
             <div className="mb-4">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light text-sm font-medium inline-block">
                 AI-Native Full-Stack Engineer | LangGraph · ReAct Agents · RAG ·
-                Anthropic/OpenAI · Next.js · FastAPI | Building production LLM
-                products | 4.5+ yrs | Open to Remote AI roles
+                Anthropic/OpenAI · Next.js · FastAPI | 4.5+ yrs | Open to Remote
+                AI roles
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Building Scalable, <AIReadyChip /> <br />
-              Web Applications
+            <h1 className="text-4xl md:text-[3.5rem] font-bold mb-6 leading-tight">
+              Building <AIReadyChip /> <br />& Scalable Web Applications
             </h1>
 
             <p className="text-xl text-dark/70 dark:text-light/70 mb-8">
               I build full-stack web applications and LLM-powered products —
-              LangGraph(LangChain) ReAct agents, RAG pipelines with vector
-              embeddings, and SQL/NoSQL data layers, wired end-to-end with
-              Next.js and FastAPI. Open to remote opportunities worldwide.
+              LangGraph ReAct agents, RAG pipelines with vector embeddings, and
+              SQL/NoSQL data layers, integrated with the Anthropic and OpenAI
+              APIs and wired end-to-end with Next.js and FastAPI. Open to remote
+              opportunities worldwide.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mb-4">
