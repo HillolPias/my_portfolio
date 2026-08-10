@@ -69,9 +69,9 @@ const Hero: React.FC = () => {
           >
             <div className="mb-4">
               <span className="px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary-light/10 dark:text-primary-light text-sm font-medium inline-block">
-                AI-Native Full-Stack Engineer · LangGraph · LangChain · RAG ·
-                ReAct Agents | Next.js · FastAPI · Node/Express.js · SQL/NoSQL |
-                Open to Remote
+                AI-Native Full-Stack Engineer | LangGraph · ReAct Agents · RAG ·
+                Anthropic/OpenAI · Next.js · FastAPI | Building production LLM
+                products | 4.5+ yrs | Open to Remote AI roles
               </span>
             </div>
 
