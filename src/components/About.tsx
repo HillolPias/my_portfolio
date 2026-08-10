@@ -244,18 +244,23 @@ const About: React.FC = () => {
     "Node.js/Express",
     "FastAPI",
     "REST API",
+    "Socket.IO",
     "PostgreSQL",
     "MySQL",
     "MongoDB",
+    "Redis",
     "LangChain",
     "LangGraph",
     "RAG",
     "Vector Embeddings",
+    "ChromaDB",
     "Multi-Agent Systems",
     "LangSmith",
+    "Anthropic API",
+    "OpenAI API",
     "Docker",
+    "GitHub Actions",
     "System Design",
-    "AWS",
   ];
 
   const aiProjects = [
@@ -319,11 +324,14 @@ const About: React.FC = () => {
               AI-native full-stack engineer with 4.5+ years of experience
               building production web applications and LLM-powered products. I
               specialise in Next.js, React, Node.js/Express, and FastAPI — with
-              hands-on experience in LangChain, LangGraph, RAG pipelines, tool
-              use, AI agents (ReAct), multi-agent systems, and LangSmith tracing
-              across the Anthropic, OpenAI, and Gemini APIs. I also bring
-              working knowledge of system design fundamentals — caching, load
-              balancing, CDNs, message queues — and cloud deployment on AWS.
+              hands-on experience in LangChain, LangGraph, RAG pipelines
+              (ChromaDB), tool use, AI agents (ReAct), multi-agent systems, and
+              LangSmith tracing across the Anthropic, OpenAI, and Gemini APIs.
+              On the backend, I work with PostgreSQL and async SQLAlchemy, and
+              ship with Docker and CI/CD pipelines (GitHub Actions). I also
+              bring working knowledge of system design fundamentals — caching,
+              load balancing, CDNs, message queues — and cloud deployment on
+              AWS.
             </p>
           </motion.div>
 
@@ -363,14 +371,18 @@ const About: React.FC = () => {
                 integrated payments, and deployed cloud-ready applications.
               </p>
               <p className="text-dark/70 dark:text-light/70">
-                I've worked the full stack: React UIs, Node.js/Express and
-                FastAPI backends, PostgreSQL, MySQL, and MongoDB, with some
-                backend microservices work in Java/Spring Boot along the way.
-                More recently I've gone deep on the AI layer — LangChain,
-                LangGraph orchestration, RAG pipelines, tool use, and
-                multi-agent systems, traced end-to-end with LangSmith — built
-                and shipped, not just studied. I also bring working knowledge of
-                system design fundamentals and AWS deployment.
+                I've worked the full stack: Next.js and React UIs,
+                Node.js/Express and FastAPI backends, PostgreSQL, MySQL, and
+                MongoDB, with some backend microservices work in Java/Spring
+                Boot along the way. I've also built real-time systems with
+                Socket.IO and set up CI/CD pipelines with Docker and GitHub
+                Actions. More recently I've gone deep on the AI layer —
+                LangChain, LangGraph orchestration, RAG pipelines (ChromaDB),
+                tool use, and multi-agent systems across the Anthropic, OpenAI,
+                and Gemini APIs, traced end-to-end with LangSmith — built and
+                shipped, not just studied. I also bring working knowledge of
+                system design fundamentals — caching, load balancing, CDNs,
+                message queues, and read replicas — and cloud deployment on AWS.
               </p>
             </motion.div>
           </div>
