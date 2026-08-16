@@ -35,8 +35,8 @@ const Experience: React.FC = () => {
       location: "Remote",
       period: "December 2023-Present",
       description: [
-        "Architected and shipped production web apps using Next.js(App Router), Node.js, React and Python (FastAPI) services, with fully responsive UIs via Tailwind CSS and Framer Motion animations.",
-        "Integrated Anthropic and OpenAI APIs into client-facing features — hands-on with prompt engineering, tool use, and AI-powered product workflows.",
+        "Architected and shipped production web apps using Next.js (App Router), Node.js, React, and Python (FastAPI) services, with fully responsive UIs via Tailwind CSS and Framer Motion.",
+        "Integrated LLM APIs (OpenAI, Google Gemini) into client-facing features, gaining hands-on experience with prompt engineering and AI-powered product flows.",
         "Led system design decisions and defined scalable architecture patterns across multiple client projects.",
         "Improved code quality through automated tooling, linting, peer reviews, and performance profiling.",
         "Integrated third-party services and APIs, reducing development time by establishing reusable integration patterns.",
@@ -90,8 +90,9 @@ const Experience: React.FC = () => {
             "Built a ReAct-style AI agent (LangGraph) with 17 tools for CRUD operations and RAG-based semantic search (ChromaDB), streaming responses token-by-token; traced end-to-end in LangSmith.",
             "Designed async REST API (FastAPI, SQLAlchemy 2.0) with Alembic migrations, deployed on PostgreSQL (Neon).",
             "Built full CI/CD pipeline (GitHub Actions): automated pytest suite against ephemeral Postgres gates both Docker image builds (Docker Hub) and production deploys (Render).",
+            "Diagnosed and resolved LLM tool-selection ambiguity and argument-mapping errors in the agent's tool-calling logic using LangSmith traces — failures invisible to standard error handling, since the agent returned confident but incorrect answers rather than throwing exceptions.",
             "Containerized with Docker + Docker Compose for reproducible local development.",
-            "Built custom-designed Next.js/TypeScript frontend with live-streaming chat UI.",
+            "Built a custom-designed Next.js/TypeScript frontend with live-streaming chat UI.",
           ],
         },
         {
