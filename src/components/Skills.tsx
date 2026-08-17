@@ -203,8 +203,9 @@ const Skills: React.FC = () => {
     { name: "LangGraph", level: 85, color: "#0F6E56" },
     { name: "RAG Pipelines", level: 85, color: "#16A34A" },
     { name: "Tool Use / Agents", level: 85, color: "#15803D" },
-    { name: "Anthropic API", level: 85, color: "#C2692A" },
+    { name: "MCP", level: 75, color: "#1C7C54" },
     { name: "OpenAI API", level: 90, color: "#10A37F" },
+    { name: "Google Gemini API", level: 90, color: "#4285F4" },
     { name: "Prompt Engineering", level: 85, color: "#7C3AED" },
     { name: "LangSmith", level: 90, color: "#D97706" },
   ];
@@ -215,6 +216,7 @@ const Skills: React.FC = () => {
     { name: "React", level: 90, color: "#61DAFB" },
     { name: "JavaScript", level: 85, color: "#F7DF1E" },
     { name: "TypeScript", level: 80, color: "#3178C6" },
+    { name: "Vercel AI SDK", level: 70, color: "#000000" },
     { name: "Tailwind CSS", level: 85, color: "#1572B6" },
     { name: "Zustand", level: 90, color: "#453F39" },
     { name: "Shadcn UI", level: 85, color: "#000000" },
@@ -226,11 +228,12 @@ const Skills: React.FC = () => {
     { name: "Node.js", level: 85, color: "#339933" },
     { name: "Express", level: 90, color: "#373737" },
     { name: "Python", level: 85, color: "#7B7FB5" },
-    { name: "FastAPI", level: 90, color: "#00694A" },
+    { name: "FastAPI", level: 95, color: "#00694A" },
     { name: "Java", level: 80, color: "#E34F26" },
     { name: "Spring Boot", level: 80, color: "#6DB33F" },
     { name: "PostgreSQL/MongoDB/MySQL", level: 85, color: "#336791" },
     { name: "Socket.IO", level: 85, color: "#21af90" },
+    { name: "Testing (pytest)", level: 80, color: "#000000" },
   ];
 
   // ── Other: removed Arcjet & Zod, added GitHub Actions ─────────
@@ -238,6 +241,7 @@ const Skills: React.FC = () => {
     { name: "Git/GitHub", level: 95, color: "#F05032" },
     { name: "GitHub Actions", level: 85, color: "#2088FF" },
     { name: "Docker", level: 80, color: "#0886AB" },
+    { name: "Docker Compose", level: 80, color: "#0886AB" },
     { name: "Vercel/Render/Railway", level: 90, color: "#000000" },
     { name: "Strapi (CMS)", level: 85, color: "#4945ff" },
     { name: "Neon DB", level: 85, color: "#34d59a" },

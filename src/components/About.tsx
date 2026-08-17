@@ -45,13 +45,13 @@ const About: React.FC = () => {
       ),
       title: "AI & LLM Integration",
       description:
-        "Building LLM-powered products with LangChain, LangGraph, RAG pipelines, tool use, and multi-agent systems — from Anthropic, OpenAI, and Gemini APIs to full product integration, with LangSmith for tracing.",
+        "Building LLM-powered products with LangChain, LangGraph, RAG pipelines, tool use, and multi-agent systems — from OpenAI and Gemini APIs to full product integration, with LangSmith for tracing.",
     },
     {
       icon: <Rocket className="w-6 h-6 text-primary dark:text-primary-light" />,
       title: "Cloud Deployment & DevOps",
       description:
-        "CI/CD pipelines with GitHub Actions, Docker, and deployments on Vercel, Render, Railway, and AWS — plus system design fundamentals like caching, load balancing, and CDNs for production-ready services.",
+        "Test-gated CI/CD pipelines with GitHub Actions and Docker — a failing test blocks both the build and the release. Deployed on Vercel, Render, and Railway, with working familiarity in AWS and system design fundamentals like caching, load balancing, and CDNs.",
     },
   ];
 
@@ -98,6 +98,19 @@ const About: React.FC = () => {
 
   const aiProjects = [
     {
+      project:
+        "Support Ops Copilot — Multi-Agent Customer Support System (Building)",
+      tech: ["LangGraph", "RAG", "FastAPI", "OpenAI API", "ChromaDB", "MCP"],
+      points: [
+        "Agent orchestration & RAG — LangGraph pipeline (triage → retrieval → draft → guardrail → approval → execute) grounding responses in a live knowledge base via ChromaDB",
+        "Guardrails & security — LLM-as-judge faithfulness scoring plus rule-based checks for prompt injection and credential leakage",
+        "Human-in-the-loop control — LangGraph interrupt() genuinely pauses execution for approval before any customer-facing action",
+        "MCP tool integration — customer actions defined as MCP-shaped tool schemas, ready to connect to real Gmail/Slack servers",
+        "Cost & latency observability (in progress) — per-node token and latency tracking toward a cost-per-resolution dashboard",
+        "Evals (in progress) — golden-ticket suite scoring accuracy and faithfulness, gating CI on quality thresholds",
+      ],
+    },
+    {
       project: "Ledger — AI Agent Task & Project Manager",
       tech: [
         "Next.js",
@@ -132,19 +145,6 @@ const About: React.FC = () => {
         "Built an AI recipe generator that analyses a photo of a user's ingredients via the Google Generative AI (Gemini) API and returns tailored, ready-to-cook recipes.",
         "Implemented drag-and-drop ingredient photo upload and PDF export of generated recipes.",
         "Implemented Clerk-based authentication and Arcjet bot/rate-limit protection on a Next.js frontend, backed by a Strapi headless CMS on PostgreSQL.",
-      ],
-    },
-    {
-      project:
-        "Support Ops Copilot — Multi-Agent Customer Support System (Building)",
-      tech: ["LangGraph", "RAG", "FastAPI", "OpenAI API", "ChromaDB", "MCP"],
-      points: [
-        "Agent orchestration & RAG — LangGraph pipeline (triage → retrieval → draft → guardrail → approval → execute) grounding responses in a live knowledge base via ChromaDB",
-        "Guardrails & security — LLM-as-judge faithfulness scoring plus rule-based checks for prompt injection and credential leakage",
-        "Human-in-the-loop control — LangGraph interrupt() genuinely pauses execution for approval before any customer-facing action",
-        "MCP tool integration — customer actions defined as MCP-shaped tool schemas, ready to connect to real Gmail/Slack servers",
-        "Cost & latency observability (in progress) — per-node token and latency tracking toward a cost-per-resolution dashboard",
-        "Evals (in progress) — golden-ticket suite scoring accuracy and faithfulness, gating CI on quality thresholds",
       ],
     },
   ];
@@ -296,14 +296,14 @@ const About: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {aiProjects.map((p, index) => {
                 // Check if this is the 3rd item in a 3-item array
-                const isThirdItem =
+                const isLastOdd =
                   index === aiProjects.length - 1 &&
                   aiProjects.length % 2 !== 0;
 
                 return (
                   <div
                     key={p.project}
-                    className={`rounded-xl border border-dark/10 dark:border-light/10 p-6 space-y-4 ${isThirdItem ? "md:col-start-2 md:col-span-2" : "md:col-span-2"}`}
+                    className={`rounded-xl border border-dark/10 dark:border-light/10 p-6 space-y-4 ${isLastOdd ? "md:col-start-2 md:col-span-2" : "md:col-span-2"}`}
                   >
                     <h4 className="text-lg font-semibold">{p.project}</h4>
                     <div className="flex flex-wrap gap-2">
