@@ -76,15 +76,40 @@ const Experience: React.FC = () => {
       period: "October 2015-present",
       description: [
         {
+          project: "Support Ops Copilot — Multi-Agent Customer Support System",
+          tech: [
+            "LangGraph",
+            "RAG",
+            "ChromaDB",
+            "FastAPI",
+            "OpenAI API",
+
+            "Next.js",
+            "MCP",
+            "GitHub Actions(CI/CD)",
+          ],
+          points: [
+            "Built a LangGraph multi-agent pipeline (triage → RAG → draft → guardrail → human approval → MCP execution) with genuine human-in-the-loop control via interrupt(), blocking any customer-facing action until human sign-off.",
+            "Independent LLM-as-judge guardrail + rule-based safety checks auto-escalate any response that fails verification.",
+            "Offline eval harness gates CI on GitHub Actions, catching real regressions before they shipped.",
+            "Real MCP client-server tool integration and per-node cost/latency instrumentation across the pipeline.",
+          ],
+        },
+        {
           project: "Ledger — AI Agent Task & Project Manager",
           tech: [
-            "Next.js",
-            "FastAPI",
-            "async SQLAlchemy",
-            "PostgreSQL",
             "LangGraph",
+            "RAG",
+            "FastAPI",
             "ChromaDB",
+            "PostgreSQL(NeonDB)",
+            "async SQLAlchemy",
+            "OPENAI API",
+            "Alembic",
+            "Next.js",
             "LangSmith",
+            "Docker",
+            "GitHub Actions(CI/CD)",
           ],
           points: [
             "Built a ReAct-style AI agent (LangGraph) with 17 tools for CRUD operations and RAG-based semantic search (ChromaDB), streaming responses token-by-token; traced end-to-end in LangSmith.",

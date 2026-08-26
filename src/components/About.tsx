@@ -98,16 +98,23 @@ const About: React.FC = () => {
 
   const aiProjects = [
     {
-      project:
-        "Support Ops Copilot — Multi-Agent Customer Support System (Building)",
-      tech: ["LangGraph", "RAG", "FastAPI", "OpenAI API", "ChromaDB", "MCP"],
+      project: "Support Ops Copilot — Multi-Agent Customer Support System",
+      tech: [
+        "LangGraph",
+        "RAG",
+        "FastAPI",
+        "OpenAI API",
+        "ChromaDB",
+        "MCP",
+        "Next.js",
+      ],
       points: [
-        "Agent orchestration & RAG — LangGraph pipeline (triage → retrieval → draft → guardrail → approval → execute) grounding responses in a live knowledge base via ChromaDB",
-        "Guardrails & security — LLM-as-judge faithfulness scoring plus rule-based checks for prompt injection and credential leakage",
-        "Human-in-the-loop control — LangGraph interrupt() genuinely pauses execution for approval before any customer-facing action",
-        "MCP tool integration — customer actions defined as MCP-shaped tool schemas, ready to connect to real Gmail/Slack servers",
-        "Cost & latency observability (in progress) — per-node token and latency tracking toward a cost-per-resolution dashboard",
-        "Evals (in progress) — golden-ticket suite scoring accuracy and faithfulness, gating CI on quality thresholds",
+        "Built a LangGraph multi-agent pipeline (triage → RAG → draft → guardrail → human approval → MCP execution) with genuine human-in-the-loop control via interrupt(), blocking any customer-facing action until human sign-off.",
+        "Guardrails & security: independent LLM-as-judge guardrail + rule-based safety checks (prompt-injection detection, credential leakage) that auto-escalates any response failing verification instead of sending it",
+        "Offline eval harness gates CI on GitHub Actions, catching real regressions before they shipped.",
+        "Integrated a real MCP client-server tool-calling architecture (not a mocked schema): a standalone MCP server exposed over stdio, with the action-executor calling it via the actual protocol handshake. ",
+        "Instrumented per-node token usage and latency across the pipeline, surfaced via the API for cost-per-resolution analysis. ",
+        "Applied cost-aware model routing (gpt-4o-mini for triage/guardrail, gpt-4o for drafting) and shipped via a documented small-team Git workflow (feature branches, PR reviews, CI-gated merges).",
       ],
     },
     {

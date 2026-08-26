@@ -7,22 +7,41 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "Support Ops Copilot — Multi-Agent Customer Support System ",
+    description:
+      "A multi-agent customer support ticket resolver built with LangGraph, FastAPI, and ChromaDB — grounding every response in a real knowledge base, verifying it with an independent AI guardrail, and requiring genuine human approval before any customer-facing action, enforced at the state-machine level via LangGraph's interrupt(). Includes a real MCP tool-calling integration, CI-gated evals, and per-node cost/latency tracking.",
+    image: "/support-ops-copilot.png",
+    tags: [
+      "LangGraph",
+      "RAG",
+      "ChromaDB",
+      "FastAPI",
+      "OpenAI API",
+      "Next.js",
+      "MCP",
+      "GitHub Actions(CI/CD)",
+    ],
+    category: "ai",
+    github: "https://github.com/HillolPias/support-ops-copilot",
+    demo: "",
+  },
+  {
+    id: 2,
     title: "Ledger - AI-Powered Task Manager",
     description:
       "A Full Stack Task & Project Management App with an AI Assistant, built with FastAPI, SQLAlchemy (Async), PostgreSQL (NeonDB), Alembic, Next.js 15, Tailwind CSS, LangChain, LangGraph, LangSmith (tracing & observability), OpenAI, and RAG-based retrieval with ChromaDB.",
     image: "/Ledger-AI-task-manager.png",
     tags: [
-      "FastAPI",
-      "Next.js",
-      "SQLAlchemy",
-      "PostgreSQL",
-      "NeonDB",
-      "Alembic",
       "LangGraph",
-      "LangSmith",
-      "OpenAI API",
       "RAG",
+      "FastAPI",
       "ChromaDB",
+      "PostgreSQL(NeonDB)",
+      "async SQLAlchemy",
+      "OPENAI API",
+      "Alembic",
+      "Next.js",
+      "LangSmith",
       "Docker",
       "GitHub Actions(CI/CD)",
     ],
@@ -31,7 +50,7 @@ const projects = [
     demo: "https://taskapi-fronend.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "CookMind - AI Recipe Generator",
     description:
       "A Full Stack AI Recipe Platform SaaS App built with Next.Js 16 with Tailwind CSS, Strapi as Headless CMS, PostgreSQL-NeonDB, Google Gemini, Google Authentication, Arcjet, Shadcn UI",
@@ -54,7 +73,7 @@ const projects = [
     demo: "https://cookmind-ivory.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Full-stack Chat App",
     description:
       "A real-time chat application with user authentication, real-time messaging, and image uploads. Built with Node.js, Express, MongoDB Atlas, Socket.io, and a React/Chakra UI frontend.",
@@ -73,7 +92,7 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Product Store App",
     description:
       "A simple and modern full-stack product management application where users can add, view, update, and delete products. Built with Node.js, Express, MongoDB Atlas, and a React/Chakra UI frontend.",
@@ -84,7 +103,7 @@ const projects = [
     demo: "https://product-store-app-eight.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "SwaPE IT Solutions",
     description:
       "A modern, responsive business website built with Next.js and TypeScript, styled using Tailwind CSS and ShadCN, with smooth animations powered by Framer Motion.",
@@ -95,7 +114,7 @@ const projects = [
     demo: "https://www.swapeit.co.uk/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Portfolio Landing Page",
     description:
       "A sleek and responsive portfolio built with Next.js, styled using Tailwind CSS, and enhanced with smooth animations via Framer Motion.",
@@ -106,7 +125,7 @@ const projects = [
     demo: "https://my-portfolio-five-theta-17.vercel.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "NextLevel Food",
     description:
       "A fullstack community-driven web application for food sharing, built with Next.js and Supabase. Features include user authentication, image uploads, and dynamic content management.",
@@ -117,7 +136,7 @@ const projects = [
     demo: "https://next-level-food-blond.vercel.app/",
   },
   {
-    id: 8,
+    id: 9,
     title: "TechGear E-commerce App",
     description:
       "A sleek full-stack e-commerce platform built with Next.js, MongoDB, Stripe, and NextAuth, featuring modern UI with Tailwind CSS, ShadCN, Framer Motion, and form validation via Zod.",
@@ -137,7 +156,7 @@ const projects = [
     demo: "https://tech-gear-app.vercel.app/",
   },
   {
-    id: 9,
+    id: 10,
     title: "FitTrack - Health & Fitness App",
     description:
       "A web application for tracking workouts, nutrition, and health metrics with personalized recommendations.",
