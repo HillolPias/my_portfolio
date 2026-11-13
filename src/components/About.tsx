@@ -37,7 +37,7 @@ const About: React.FC = () => {
       icon: <Code className="w-6 h-6 text-primary dark:text-primary-light" />,
       title: "Full-Stack Development",
       description:
-        "End-to-end web apps using Next.js, React, TypeScript, Node.js/Express, and FastAPI — from API design to containerised deployment.",
+        "End-to-end web applications with Next.js, React, TypeScript, Node.js and FastAPI — from database design and authenticated, multi-tenant APIs to polished UIs and containerised deployment.",
     },
     {
       icon: (
@@ -45,13 +45,13 @@ const About: React.FC = () => {
       ),
       title: "AI & LLM Integration",
       description:
-        "Building LLM-powered products with LangChain, LangGraph, RAG pipelines, tool use, and multi-agent systems — from OpenAI and Gemini APIs to full product integration, with LangSmith for tracing.",
+        "Production LLM features built on LangChain and LangGraph: RAG over pgvector, multi-agent workflows, human-in-the-loop approval, guardrails and tracing with Langfuse and LangSmith — on OpenAI and Gemini.",
     },
     {
       icon: <Rocket className="w-6 h-6 text-primary dark:text-primary-light" />,
       title: "Cloud Deployment & DevOps",
       description:
-        "Test-gated CI/CD pipelines with GitHub Actions and Docker — a failing test blocks both the build and the release. Deployed on Vercel, Render, and Railway, with working familiarity in AWS and system design fundamentals like caching, load balancing, and CDNs.",
+        "Test-gated CI/CD with GitHub Actions and Docker — tests, linting and migration checks on every pull request. Deployed on Vercel, Render, Railway and Neon, with working familiarity in AWS and system design fundamentals like caching, load balancing and CDNs.",
     },
   ];
 
@@ -59,56 +59,100 @@ const About: React.FC = () => {
     "AI / LLM": [
       "LangChain",
       "LangGraph",
-      "RAG (ChromaDB)",
-      "Multi-Agent Systems",
-      "ReAct Agents",
-      "Human-in-the-Loop",
+      "RAG (pgvector,ChromaDB)",
+      "Embeddings & semantic search",
       "MCP",
-      "OpenAI API",
-      "Gemini API",
-      "LangSmith",
-      "Tool Use / Function Calling",
-      "LLM Streaming",
-      "Prompt Engineering",
-      "LLM-as-Judge",
+      "OpenAI & Gemini APIs",
+      "Tool use / function calling",
+      "Streaming",
+      "Prompt engineering",
+      "LLM-as-judge guardrails",
+      "LLM observability & tracing (Langfuse, LangSmith)",
+      "Cost-aware model routing",
+      "Multi-agent & ReAct agents",
+      "Human-in-the-loop (durable, Postgres checkpointing)",
     ],
     "Full-Stack": [
-      "Next.js",
+      "Next.js (App Router)",
       "React",
       "TypeScript",
-      "Node.js / Express",
+      "Tailwind CSS",
+      "Node.js/Express",
       "FastAPI",
-      "REST APIs",
+      "Pydantic",
+      "REST API design",
+      "JWT authentication",
+      "Multi-tenant SaaS architecture",
       "Socket.IO",
       "Java/Spring Boot",
     ],
-    "Data & Infra": [
-      "PostgreSQL",
+    "Infra & Data": [
+      "PostgreSQL (Neon)",
+      "pgvector",
+      "Redis",
+      "Arq (async job queue)",
+      "async SQLAlchemy 2.0",
+      "Alembic migrations",
       "MySQL",
       "MongoDB",
       "Docker",
       "Docker Compose",
       "GitHub Actions CI/CD",
-      "async SQLAlchemy",
-      "Alembic",
+      "Vercel",
+      "Render",
+      "Railway",
+      "Stripe (usage-based billing, idempotency)",
+      "Supabase",
+      "Strapi CMS",
     ],
     "Testing & Quality": [
-      "pytest",
-      "CI-Gated Deploys",
-      "Offline Eval",
-      "DI Test Isolation",
+      "pytest (async, integration tests on a real Postgres)",
+      "Dependency-injected test isolation",
+      "Tenant-isolation testing",
+      "CI quality gates (ruff, migration checks, build)",
+      "Offline eval",
     ],
   };
 
+  const systemDesignExpertise = [
+    "async job queues",
+    "multi-tenant data isolation",
+    "durable long-running workflows",
+    "containerised deployment",
+  ];
+
   const systemDesignFamiliarity = [
-    "Redis",
-    "Load Balancing",
+    "Redis caching",
+    "load balancing",
     "CDNs",
-    "Message Queues",
-    "AWS",
+    "read replicas",
+    "object storage and AWS (ECS/RDS)",
+    "applied in design discussions",
   ];
 
   const aiProjects = [
+    {
+      project: "SentinelDesk — Async Multi-Tenant AI Ticket Triage Platform",
+      tech: [
+        "FastAPI",
+        "Next.js",
+        "LangGraph",
+        "PostgreSQL/pgvector",
+        "Redis/Arq",
+        "Langfuse",
+        "Stripe",
+      ],
+      points: [
+        "Designed and shipped a multi-tenant SaaS (Next.js 16, FastAPI, PostgreSQL) in which every request is scoped by a tenant claim in a signed JWT; cross-tenant access returns 404, and automated isolation tests fail CI if a tenant filter is ever dropped.",
+        "Decoupled ingestion from LLM processing with an async job queue (Redis + Arq): the API acknowledges a ticket while a worker runs a 5-node LangGraph pipeline (classify → pgvector RAG → draft → LLM-as-judge guardrail → human approval).",
+        "Built durable human-in-the-loop approval: graph state is checkpointed to Postgres (LangGraph checkpointer, thread_id = ticket id), so a run paused by the worker is resumed by a different process through an approval endpoint, with state-machine guards against double-approval and checkpoint/database drift.",
+        "Implemented RAG on pgvector (text-embedding-3-small) in the same Postgres as application data, with idempotent knowledge-base seeding and semantic retrieval expressed as plain SQL.",
+        "Instrumented every LLM call with Langfuse tracing grouped per ticket (latency, tokens, cost) and applied cost-aware model routing (gpt-4o-mini; temperature 0 for classification and guardrail).",
+        "Added usage-based billing with Stripe (test mode): metered by processed tickets and invoiced idempotently (row-level locking + Stripe idempotency keys) so no ticket is billed twice.",
+        "Enforced quality on every pull request: a 31-test pytest suite on a real Postgres (Stripe, Redis and the LLM graph faked), migrations verified on an empty database plus `alembic check`, ruff, frontend lint/build and Docker image build; the suite caught a billing-logic bug and broken migrations before release.",
+        "Containerised the API and worker with Docker and deployed to Vercel (web), Render (API + worker, Redis) and Neon (Postgres), with documented design decisions and known limitations.",
+      ],
+    },
     {
       project: "Support Ops Copilot — Multi-Agent Customer Support System",
       tech: [
@@ -189,18 +233,7 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <div className="w-24 h-1 bg-primary dark:bg-primary-light mx-auto mb-8"></div>
             <p className="text-lg text-dark/70 dark:text-light/70 max-w-3xl mx-auto">
-              AI-native full-stack engineer with 4.5+ years of experience
-              building production web applications and LLM-powered products. I
-              specialise in Next.js, React, Node.js/Express, and FastAPI — with
-              hands-on experience in LangChain, LangGraph, RAG pipelines
-              (ChromaDB), tool use, AI agents (ReAct), multi-agent systems, and
-              LangSmith tracing across the OpenAI and Gemini APIs. On the
-              backend, I work with PostgreSQL and async SQLAlchemy, and ship
-              through test-gated CI/CD pipelines (GitHub Actions, Docker). I
-              also bring working familiarity with system design fundamentals —
-              caching, load balancing, CDNs, message queues — and cloud
-              architecture on AWS, applied in design discussions rather than
-              production deployment so far.
+              AI-native full-stack engineer with 5+ years of experience building production web applications and LLM-powered products. I specialise in Next.js, React, TypeScript, Node.js/Express, and FastAPI — with hands-on experience in LangChain and LangGraph (multi-agent systems, ReAct agents, durable human-in-the-loop workflows), RAG pipelines on pgvector and ChromaDB, tool use, and LLM observability with Langfuse and LangSmith across the OpenAI and Gemini APIs. On the backend, I work with PostgreSQL, async SQLAlchemy, Redis-backed job queues, and multi-tenant API design, and ship through test-gated CI/CD pipelines (GitHub Actions, Docker). I also bring working familiarity with system design fundamentals — caching, load balancing, CDNs, read replicas — and cloud architecture on AWS, applied in design discussions rather than production deployment so far.
             </p>
           </motion.div>
 
@@ -234,29 +267,13 @@ const About: React.FC = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               <p className="text-dark/70 dark:text-light/70">
-                I started as a self-taught developer in 2015 — freelancing,
-                reading docs, learning by shipping. That grew into full-stack
-                roles where I've architected APIs, built CMS platforms,
-                integrated payments, and deployed cloud-ready applications.
-              </p>
-              <p className="text-dark/70 dark:text-light/70">
-                I started as a self-taught developer in 2015 — freelancing,
-                reading docs, learning by shipping. That grew into full-stack
-                roles where I've architected APIs, built CMS platforms,
-                integrated payments, and deployed cloud-ready applications. I've
-                worked the full stack: Next.js/React UIs, Node.js/Express and
-                FastAPI backends, PostgreSQL, MySQL, and MongoDB, with some
-                Java/Spring Boot microservices along the way — plus real-time
-                systems with Socket.IO and CI/CD pipelines (Docker, GitHub
-                Actions) where a failing test blocks both the build and the
-                release, not just in theory. More recently I've gone deep on the
-                AI layer — LangChain, LangGraph orchestration, RAG (ChromaDB),
-                tool use, and multi-agent systems across the OpenAI and Gemini
-                APIs, traced end-to-end with LangSmith — built and shipped, not
-                just studied. I also bring working familiarity with system
-                design fundamentals — caching, load balancing, CDNs, message
-                queues, read replicas, and AWS — which I can speak to in depth
-                but haven't yet deployed in production.
+                I started as a self-taught developer in 2015 — freelancing, reading docs, learning by shipping. That grew into full-stack roles where I've architected APIs, built CMS platforms, integrated payments, and deployed cloud-ready applications.
+
+                I've worked the full stack: Next.js/React UIs, Node.js/Express and FastAPI backends, PostgreSQL, MySQL, and MongoDB, with some Java/Spring Boot microservices along the way — plus real-time systems with Socket.IO and CI/CD pipelines (Docker, GitHub Actions) where a failing test blocks both the build and the release, not just in theory.
+
+                More recently I've gone deep on the AI layer — LangChain and LangGraph orchestration, RAG (pgvector, ChromaDB), tool use, and multi-agent systems across the OpenAI and Gemini APIs, traced end-to-end with Langfuse and LangSmith — built and shipped, not just studied. My latest project, SentinelDesk, is where I moved from building AI features to operating them: a multi-tenant triage platform with async job queues, durable human-in-the-loop approval, and usage-based billing, deployed publicly on Vercel, Render, and Neon.
+
+                I also bring working familiarity with system design fundamentals — caching, load balancing, CDNs, read replicas, and AWS — which I can speak to in depth but haven't yet deployed in production.
               </p>
             </motion.div>
           </div>
@@ -291,6 +308,19 @@ const About: React.FC = () => {
                 System Design
               </p>
               <p className="text-xs text-dark/40 dark:text-light/40 mb-2.5">
+                hands-on with
+              </p>
+              <div className="flex flex-wrap gap-2.5">
+                {systemDesignExpertise.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3.5 py-1.5 rounded-full border border-dashed border-dark/15 dark:border-light/15 text-sm text-dark/45 dark:text-light/45"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <p className="text-xs text-dark/40 dark:text-light/40 mb-2.5 mt-2">
                 Familiarity — applied in design discussions, not yet in
                 production
               </p>
@@ -322,7 +352,7 @@ const About: React.FC = () => {
                 return (
                   <div
                     key={p.project}
-                    className={`rounded-xl border border-dark/10 dark:border-light/10 p-6 space-y-4 ${isLastOdd ? "md:col-start-2 md:col-span-2" : "md:col-span-2"}`}
+                    className={`rounded-xl border border-dark/10 dark:border-light/10 p-6 space-y-4 ${isLastOdd ? "md:col-span-2" : "md:col-span-2"}`}
                   >
                     <h4 className="text-lg font-semibold">{p.project}</h4>
                     <div className="flex flex-wrap gap-2">

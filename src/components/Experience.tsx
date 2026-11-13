@@ -36,7 +36,7 @@ const Experience: React.FC = () => {
       period: "December 2023-Present",
       description: [
         "Architected and shipped production web apps using Next.js (App Router), Node.js, React, and Python (FastAPI) services, with fully responsive UIs via Tailwind CSS and Framer Motion.",
-        "Integrated LLM APIs (OpenAI, Google Gemini) into client-facing features, gaining hands-on experience with prompt engineering and AI-powered product flows.",
+        "Integrated LLM APIs (OpenAI, Google Gemini) into client-facing features, including prompt engineering and AI-powered product flows.",
         "Led system design decisions and defined scalable architecture patterns across multiple client projects.",
         "Improved code quality through automated tooling, linting, peer reviews, and performance profiling.",
         "Integrated third-party services and APIs, reducing development time by establishing reusable integration patterns.",
@@ -49,9 +49,9 @@ const Experience: React.FC = () => {
       period: "November 2021-December 2023",
       description: [
         "Built RESTful APIs with Next.js and Node.js (Express), and Python (FastAPI): implemented real-time features using Socket.IO, serving concurrent users without performance degradation.",
-        "Developed and maintained microservices using Java (Spring Boot), ensuring high availability and horizontal scalability.",
         "Integrated Strapi headless CMS enabling non-technical stakeholders to manage content without developer intervention.",
-        "Established CI/CD pipelines with Docker, cutting deployment time significantly and reducing production incidents.",
+        "Established CI/CD pipelines with Docker, cutting deployment time and reducing production incidents.",
+        "Developed and maintained microservices using Java (Spring Boot), ensuring high availability and horizontal scalability.",
       ],
     },
     // {
@@ -75,68 +75,7 @@ const Experience: React.FC = () => {
       location: "Dhaka, Bangladesh",
       period: "October 2015-present",
       description: [
-        {
-          project: "Support Ops Copilot — Multi-Agent Customer Support System",
-          tech: [
-            "LangGraph",
-            "RAG",
-            "ChromaDB",
-            "FastAPI",
-            "OpenAI API",
-
-            "Next.js",
-            "MCP",
-            "GitHub Actions(CI/CD)",
-          ],
-          points: [
-            "Built a LangGraph multi-agent pipeline (triage → RAG → draft → guardrail → human approval → MCP execution) with genuine human-in-the-loop control via interrupt(), blocking any customer-facing action until human sign-off.",
-            "Independent LLM-as-judge guardrail + rule-based safety checks auto-escalate any response that fails verification.",
-            "Offline eval harness gates CI on GitHub Actions, catching real regressions before they shipped.",
-            "Real MCP client-server tool integration and per-node cost/latency instrumentation across the pipeline.",
-          ],
-        },
-        {
-          project: "Ledger — AI Agent Task & Project Manager",
-          tech: [
-            "LangGraph",
-            "RAG",
-            "FastAPI",
-            "ChromaDB",
-            "PostgreSQL(NeonDB)",
-            "async SQLAlchemy",
-            "OPENAI API",
-            "Alembic",
-            "Next.js",
-            "LangSmith",
-            "Docker",
-            "GitHub Actions(CI/CD)",
-          ],
-          points: [
-            "Built a ReAct-style AI agent (LangGraph) with 17 tools for CRUD operations and RAG-based semantic search (ChromaDB), streaming responses token-by-token; traced end-to-end in LangSmith.",
-            "Designed async REST API (FastAPI, SQLAlchemy 2.0) with Alembic migrations, deployed on PostgreSQL (Neon).",
-            "Built full CI/CD pipeline (GitHub Actions): automated pytest suite against ephemeral Postgres gates both Docker image builds (Docker Hub) and production deploys (Render).",
-            "Diagnosed and resolved LLM tool-selection ambiguity and argument-mapping errors in the agent's tool-calling logic using LangSmith traces — failures invisible to standard error handling, since the agent returned confident but incorrect answers rather than throwing exceptions.",
-            "Containerized with Docker + Docker Compose for reproducible local development.",
-            "Built a custom-designed Next.js/TypeScript frontend with live-streaming chat UI.",
-          ],
-        },
-        {
-          project: "Cookmind — AI Recipe Generator",
-          tech: [
-            "Next.js",
-            "React",
-            "Google Gemini API",
-            "Strapi",
-            "PostgreSQL",
-            "Clerk",
-            "Arcjet",
-          ],
-          points: [
-            "Built an AI recipe generator that analyses a photo of a user's ingredients via the Google Generative AI (Gemini) API and returns tailored, ready-to-cook recipes.",
-            "Implemented drag-and-drop ingredient photo upload and PDF export of generated recipes.",
-            "Implemented Clerk-based authentication and Arcjet bot/rate-limit protection on a Next.js frontend, backed by a Strapi headless CMS on PostgreSQL.",
-          ],
-        },
+        "Built and shipped AI-agent and AI-assisted products (see AI Projects section), spanning Next.js frontends, FastAPI/Node backends, and LangChain/LangGraph agent orchestration.",
         "Delivered e-commerce and booking systems using Node.js, React, and Next.js with Stripe payment integration, role-based access control, and RESTful APIs.",
         "Designed and optimized PostgreSQL, MongoDB, and MySQL databases for scalable, production-ready applications.",
       ],
@@ -224,36 +163,36 @@ const Experience: React.FC = () => {
                           );
                         }
 
-                        // ✅ Case 2: Object with points
-                        if (typeof item === "object") {
-                          return (
-                            <li key={idx} className="space-y-2">
-                              {/* Project Title */}
-                              <div className="flex items-start gap-2">
-                                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light flex-shrink-0" />
-                                <p className="font-medium text-dark dark:text-light">
-                                  {item.project}{" "}
-                                  <span className="text-sm text-dark/50 dark:text-light/50">
-                                    ({item.tech.join(" · ")})
-                                  </span>
-                                </p>
-                              </div>
+                        // // ✅ Case 2: Object with points
+                        // if (typeof item === "object") {
+                        //   return (
+                        //     <li key={idx} className="space-y-2">
+                        //       {/* Project Title */}
+                        //       <div className="flex items-start gap-2">
+                        //         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light flex-shrink-0" />
+                        //         <p className="font-medium text-dark dark:text-light">
+                        //           {item.project}{" "}
+                        //           <span className="text-sm text-dark/50 dark:text-light/50">
+                        //             ({item.tech.join(" · ")})
+                        //           </span>
+                        //         </p>
+                        //       </div>
 
-                              {/* Sub points */}
-                              <ul className="ml-5 space-y-1 border-l border-primary/20 pl-3">
-                                {item.points.map((point, i) => (
-                                  <li
-                                    key={i}
-                                    className="flex items-start gap-2 text-dark/70 dark:text-light/70"
-                                  >
-                                    <span className="mt-2 w-1 h-1 rounded-full bg-primary/70 flex-shrink-0" />
-                                    {point}
-                                  </li>
-                                ))}
-                              </ul>
-                            </li>
-                          );
-                        }
+                        //       {/* Sub points */}
+                        //       <ul className="ml-5 space-y-1 border-l border-primary/20 pl-3">
+                        //         {item.points.map((point, i) => (
+                        //           <li
+                        //             key={i}
+                        //             className="flex items-start gap-2 text-dark/70 dark:text-light/70"
+                        //           >
+                        //             <span className="mt-2 w-1 h-1 rounded-full bg-primary/70 flex-shrink-0" />
+                        //             {point}
+                        //           </li>
+                        //         ))}
+                        //       </ul>
+                        //     </li>
+                        //   );
+                        // }
 
                         return null;
                       })}
