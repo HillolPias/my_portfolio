@@ -10,7 +10,7 @@ const projects = [
     title: "SentinelDesk — Async Multi-Tenant AI Ticket Triage Platform",
     description:
       "A support ticket comes in. A LangGraph pipeline classifies it, retrieves relevant help-center articles (RAG), drafts a reply, and runs an independent LLM-as-judge guardrail. Then it stops. Nothing is sent until a human reviews the draft and clicks Approve. The pause is durable: the approval can happen minutes or days later, from a different process, and the pipeline resumes exactly where it stopped.",
-    image: "/support-ops-copilot.png",
+    image: "/screenshot-sentineldesk1.png",
     tags: [
       "FastAPI",
       "Next.js",
