@@ -42,8 +42,8 @@ const Skills: React.FC = () => {
     { name: "Human-in-the-loop workflow", level: 85, color: "#15803D" },
     { name: "Guardrails (LLM-as-judge)", level: 80, color: "#15803D" },
     { name: "MCP", level: 75, color: "#1C7C54" },
-    { name: "OpenAI API", level: 90, color: "#10A37F" },
-    { name: "Google Gemini API", level: 90, color: "#4285F4" },
+    { name: "OpenAI API / Google Gemini API", level: 90, color: "#10A37F" },
+    { name: "Rate Limiting", level: 90, color: "#4285F4" },
     { name: "Prompt Engineering", level: 85, color: "#7C3AED" },
     { name: "LLM Observability (Langfuse, LangSmith)", level: 85, color: "#D97706" },
   ];
