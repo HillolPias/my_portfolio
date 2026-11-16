@@ -71,6 +71,7 @@ const About: React.FC = () => {
       "Cost-aware model routing",
       "Multi-agent & ReAct agents",
       "Human-in-the-loop (durable, Postgres checkpointing)",
+      "Rate Limiting"
     ],
     "Full-Stack": [
       "Next.js (App Router)",
@@ -150,7 +151,7 @@ const About: React.FC = () => {
         "Instrumented every LLM call with Langfuse tracing grouped per ticket (latency, tokens, cost) and applied cost-aware model routing (gpt-4o-mini; temperature 0 for classification and guardrail).",
         "Redis-backed rate limiting (per workspace, per IP, global daily LLM budget cap)",
         "Added usage-based billing with Stripe (test mode): metered by processed tickets and invoiced idempotently (row-level locking + Stripe idempotency keys) so no ticket is billed twice.",
-        "Enforced quality on every pull request: a 31-test pytest suite on a real Postgres (Stripe, Redis and the LLM graph faked), migrations verified on an empty database plus `alembic check`, ruff, frontend lint/build and Docker image build; the suite caught a billing-logic bug and broken migrations before release.",
+        "Enforced quality on every pull request: a 39-test pytest suite on a real Postgres (Stripe, Redis and the LLM graph faked), migrations verified on an empty database plus `alembic check`, ruff, frontend lint/build and Docker image build; the suite caught a billing-logic bug and broken migrations before release.",
         "Containerised the API and worker with Docker and deployed to Vercel (web), Render (API + worker, Redis) and Neon (Postgres), with documented design decisions and known limitations.",
       ],
     },
